@@ -10,5 +10,5 @@ Período de realização de 01/10/24 a 10/01/25
 | Aula 02 | | | |
 | Aula 03 | 03.10.24 | Melhores práticas para a Análise de Requisitos para Banco de Dados | |
 | Aula 04 |  | | |
-| Aula 05 | 07.10.24 | | |
+| Aula 05 | 07.10.24 | Requisitos funcionais e requisitos não funcionais | |
 
