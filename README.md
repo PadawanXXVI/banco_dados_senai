@@ -2,7 +2,7 @@
 
 Curso ministrado pelo professor Cézar Dias no Senai DF, na unidade do SIG
 
-Período de realização de 01/10/24 a 10/01/25
+Período de realização de 01/10/24 a 12/12/24
 
 | AULA | DATA | CONTEÚDO | LINK |
 | :-: | :-: | :- | :-: |
