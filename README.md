@@ -15,3 +15,4 @@ Período de realização de 01/10/24 a 12/12/24
 | Aula 07 | 09.10.24 | Documentação de Requisitos (cont.) |
 | Aula 08 | 10.10.24 | Documentação de Requisitos (cont.) |
 | Aula 09 | 11.10.24 | Documentação de Requisitos (cont.) |
+| Aula 10 | 15.10.24 | |
