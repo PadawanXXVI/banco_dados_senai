@@ -1,0 +1,2 @@
+show databases;
+USE aulavespertino;
