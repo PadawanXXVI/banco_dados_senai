@@ -2,6 +2,8 @@
 
 Curso ministrado pelo professor Cézar Dias no Senai DF, na unidade do SIG
 
+Curso ministrado pelo professor Igor a partir do dia 21.10.24
+
 Período de realização de 01/10/24 a 12/12/24
 
 | AULA | DATA | CONTEÚDO | LINK |
@@ -17,3 +19,7 @@ Período de realização de 01/10/24 a 12/12/24
 | Aula 09 | 11.10.24 | Documentação de Requisitos (cont.) |
 | Aula 10 | 15.10.24 | Instalação do servidor Ubuntu |
 | Aula 11 | 16.10.24 | MySql Workbench |
+| Aula 12 | 17.10.24 | |
+| Aula 13 | 18.10.24 | |
+| Aula 01* | 21.10.24| Apresentação da disciplina, cronograma da disciplina |
+
