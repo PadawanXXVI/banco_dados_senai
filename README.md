@@ -22,4 +22,4 @@ Período de realização de 01/10/24 a 12/12/24
 | Aula 12 | 17.10.24 | |
 | Aula 13 | 18.10.24 | |
 | Aula 01* | 21.10.24| Apresentação da disciplina, cronograma da disciplina |[Aula01](aula01\aula01.md) |
-| Aula 02* | 22.10.24 | | [Aula02](aula02\aula02.md) |
+| Aula 02* | 22.10.24 | Introdução a Banco de Dados | [Aula02](aula02\aula02.md) |
