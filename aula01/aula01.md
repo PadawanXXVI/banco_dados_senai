@@ -1,4 +1,4 @@
-# Introdução a Banco de Dados
+# Introdução a Banco de Dados 21.10.24
 - 36 aulas no total:
     - 10 aulas de modelagem
     - 03 aulas de empreendedorismo 
