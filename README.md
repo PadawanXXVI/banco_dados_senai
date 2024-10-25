@@ -1,8 +1,10 @@
 # ADMINISTRADOR DE BANCO DE DADOS
 
-Curso ministrado pelo professor Cézar Dias no Senai DF, na unidade do SIG
+Curso do Senai DF administrado na unidade SIG
 
-Curso ministrado pelo professor Igor a partir do dia 21.10.24
+Curso ministrado pelo professor Cézar Dias até o dia 11.10.24
+
+Curso ministrado pelo professor Ygor a partir do dia 21.10.24
 
 Período de realização de 01/10/24 a 12/12/24
 
