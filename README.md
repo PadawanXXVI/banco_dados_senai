@@ -26,3 +26,10 @@ Período de realização de 01/10/24 a 12/12/24
 | Aula 02* | 22.10.24 | Modelo Relacional | [Aula02](aula02/modelo_relacional.md) |
 | Aula 03* | 23.10.24 | Abstração de Dados e Modelagem de Dados |[Aula03](aula03) |
 | Aula 04* | 24.10.24 | Modelo Entidade Relacionamento (DER) | [Aula04](aula04) |
+
+## Miscelânea
+
+| Item | Link |
+| :- | :-: |
+| Modelo Word Atividades | modelo.dotx |
+| Logo Senai | logo_senai.jpg |
