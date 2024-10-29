@@ -30,6 +30,7 @@ Período de realização de 01/10/24 a 12/12/24
 | Aula 04* | 24.10.24 | Diagrama Entidade Relacionamento (DER) | [Aula04](aula04) |
 | Aula 05* | 25.10.24 | Atividade sobre SGBD e término de atividades atrasadas | [Aula05](aula05)|
 | Aula 06* | 28.10.24 | Introdução a Atributos| [Aula06](aula06) |
+| Aula 07* | 29.10.24 | | [Aula07](aula07) |
 
 ## Miscelânea
 
