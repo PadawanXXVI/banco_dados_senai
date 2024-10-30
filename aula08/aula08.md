@@ -62,4 +62,4 @@ Os atributos multivalorados, compostos e suas combinações não podem ser aceit
 
 - Estar na 1FN
 - Estar na 2F
-- Remover dependências transitivas
+- Remover dependências transacionais
