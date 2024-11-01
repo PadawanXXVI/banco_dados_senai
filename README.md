@@ -35,6 +35,7 @@ Período de realização de 01/10/24 a 12/12/24
 | Aula 09* | 31.10.24 | Formtura DF Inovatech no Senai Taguatinga | Sem Link |
 | Aula 10* | 01.11.24 | 1ª Avaliação | Sem Link |
 | Aula 10* | 01.11.24 | Disciplina Transversal - Empreendedorismo | [Aula10](aula10) |
+| Aula 10* | 01.11.24 | Tipos de Dados + Dicionário de Dados | [Aula10](aula10) |
 
 
 ## Miscelânea
