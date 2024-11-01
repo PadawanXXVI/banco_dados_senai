@@ -69,7 +69,4 @@ Disponibiliza informações sobre os objetos ...
 | | nome | VARCHAR | not null | Nome completo do aluno |
 | | data_nascimento | | |
 
-
-
-
 ## 1.3 Conceito segundo a IBM
