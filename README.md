@@ -34,6 +34,8 @@ Período de realização de 01/10/24 a 12/12/24
 | Aula 08* | 30.10.24 | Normalização | [Aula08](aula08) |
 | Aula 09* | 31.10.24 | Formtura DF Inovatech no Senai Taguatinga | Sem Link |
 | Aula 10* | 01.11.24 | 1ª Avaliação | Sem Link |
+| Aula 10* | 01.11.24 | Disciplina Transversal - Empreendedorismo | [Aula10](aula10) |
+
 
 ## Miscelânea
 
