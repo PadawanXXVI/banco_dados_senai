@@ -9,6 +9,7 @@ Essas tabelas são compostas por linhas e colunas.
 - Tabela: representação visual de colunas e linhas
 
 ## Relacionamentos
+
 - um-para-um
 - um-para-muitos
 - muitos-para-muitos

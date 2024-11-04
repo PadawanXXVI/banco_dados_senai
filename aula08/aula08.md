@@ -1,4 +1,4 @@
-# NORMALIZAÇÃO (30.10.24)
+# NORMALIZAÇÃO 30.10.24
 
 ## 1 Anomalias
 
@@ -10,23 +10,23 @@ São problemas que surgem em bancos de dados que não foram bem planejados ou no
 
 É um problema que ocorre quando não é possível adicionar um novo dado em uma tabela sem preencher informaçãoes que ainda não existem ou que não são necessárias.
 
-Exemplo:<br>
-Cliente e Pedido<br>
+Exemplo:\
+Cliente e Pedido\
 Aluno e Curso
 
 #### 1.1.2 Anomaliza de Exclusão
 
 Acontece quando a exclusão de uma registro leva à perda indesejada de outros dados importantes que esão vinculados a ele.
 
-Exemplo:<br>
-Cliente e Pedido<br>
+Exemplo:\
+Cliente e Pedido\
 Funcinário e Departamento
 
 #### Anomalia de Modificação
 
 Ocorre quando a mesma infomação é armazanda em vaprios lugares dentro de uma tabela. Isso causa problemas quando você precisa atualizar essa informação, pois é necessário modificar todos os registros onde ela aparece. Se a atualização não for feita em todos os locais, isso resulta em dados inconsistentes.
 
-Exemplo:<br>
+Exemplo:\
 Clientes e Pedido
 
 | Nome | Pedido |
@@ -48,6 +48,7 @@ Para evitar as anomalias, usamos o processo de normalização, como 1FN, 2FN e 3
 Os atributos multivalorados, compostos e suas combinações não podem ser aceitos.
 
 #### 2.1.1 Requisitos da 1FN
+
 - Valores atômicos
 - Registros únicos
 - Formato tabular
@@ -55,10 +56,11 @@ Os atributos multivalorados, compostos e suas combinações não podem ser aceit
 ### 2.2 2FN
 
 #### Requisitos
+
 - Estar na 1FN
 - Remover as dependências parciais
 
-### 3FN 
+### 3FN
 
 - Estar na 1FN
 - Estar na 2F
