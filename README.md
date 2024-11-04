@@ -36,6 +36,7 @@ Período de realização de 01/10/24 a 12/12/24
 | Aula 10* | 01.11.24 | 1ª Avaliação | Sem Link |
 | Aula 10* | 01.11.24 | Disciplina Transversal - Empreendedorismo | [Aula10](aula10) |
 | Aula 10* | 01.11.24 | Tipos de Dados + Dicionário de Dados | [Aula10](aula10) |
+| Aula 11* | 04.11.24 | Relação de dados - atividades | [Aula11](aula11) |
 
 
 ## Miscelânea
