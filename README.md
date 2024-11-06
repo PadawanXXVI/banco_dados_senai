@@ -37,7 +37,8 @@ Período de realização de 01/10/24 a 12/12/24
 | Aula 10* | 01.11.24 | Disciplina Transversal - Empreendedorismo | [Aula10](aula10) |
 | Aula 10* | 01.11.24 | Tipos de Dados + Dicionário de Dados | [Aula10](aula10) |
 | Aula 11* | 04.11.24 | Relação de dados - atividades | [Aula11](aula11) |
-| Aula 12* | 05.11.24 | Atividade de modelagem | [Aula12](aula12)|
+| Aula 12* | 05.11.24 | Atividade de modelagem | [Aula12](aula12) |
+| Aula 13* | 06.11.24 | Atividade de modelagem | [Aula13](aula13) |
 
 ## Miscelânea
 
