@@ -65,3 +65,5 @@ Os atributos multivalorados, compostos e suas combinações não podem ser aceit
 - Estar na 1FN
 - Estar na 2F
 - Remover dependências transacionais
+
+[Página Inicial](../README.md)

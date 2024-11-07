@@ -65,3 +65,5 @@ ALUNO (1,N) - (1,N) DISCIPLINA
 (N:N)
 - conjuntos:\
 os elementos do domínio se relacionam com vários elementos do contradomínio e vice-versa.
+
+[Página Inicial](../README.md)

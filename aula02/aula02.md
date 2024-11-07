@@ -38,3 +38,5 @@ Permite uso de dados e informaçãoes para prever tendências, tomar decisões e
 - Relacional
 - Orientado a objetos
 - Em documentos
+
+[Página Inicial](../README.md)
