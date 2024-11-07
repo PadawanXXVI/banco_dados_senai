@@ -6,4 +6,4 @@
   - 20 aulas de SQL
   - 03 aulas de Projeto Final
   
-[Página Inicial](../README.md
+[Página Inicial](../README.md)
