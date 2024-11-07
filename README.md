@@ -45,4 +45,4 @@ Período de realização de 01/10/24 a 12/12/24
 | Item | Link |
 | :- | :-: |
 | Modelo Word Atividades | [Modelo Word](modelo.dotx) |
-| Logo Senai | [Logo Senai](logo_senai.jpg) |
+| Logo Senai | [Logo Senai](logo_senai.png) |
