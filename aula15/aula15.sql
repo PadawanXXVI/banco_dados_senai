@@ -36,3 +36,32 @@ DESC tb_aluno;
 
 -- comando para apagar tabela
 DROP TABLE tb_aluno;
+
+-- criação da tabela com restrições nos atributos
+CREATE TABLE tb_aluno(
+	id_aluno INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(125) NOT NULL,
+    email VARCHAR(125),
+    data_nascimento DATE NOT NULL
+);
+
+DESC tb_aluno;
+
+-- comando para alimentar a tabela
+INSERT INTO tb_aluno
+	(id_aluno,nome,email,data_nascimento)
+VALUES 
+    (1,'Maria','maria@email.com',20001020); -- data ANOMÊSDIA
+    
+-- comando para visualizar a tabela com os dados inseridos
+SELECT * FROM tb_aluno; -- o asterisco informa que quer trazer todas as colunas
+
+-- comando para visualizar uma coluna da tabela
+SELECT nome FROM tb_aluno; -- informa quais colunas quer visualizar colocando o nome delas no lugar do asterisco
+
+-- comando para visualizar mais de uma coluna
+SELECT nome,email FROM tb_aluno;
+
+-- comando para alterar o nome da tabela
+RENAME TABLE tb_aluno TO tb_pessoa;
+    
