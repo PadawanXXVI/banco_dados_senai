@@ -26,3 +26,13 @@ CREATE TABLE tb_aluno(
     email VARCHAR(125),
     data_nascimento DATE
 );
+
+-- comando para mostrar todas as tabelas criadas
+SHOW TABLES;
+
+-- comando para mostrar a descrição da tabela
+DESCRIBE tb_aluno;
+DESC tb_aluno;
+
+-- comando para apagar tabela
+DROP TABLE tb_aluno;
