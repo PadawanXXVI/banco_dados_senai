@@ -20,12 +20,12 @@ Linguagem de Definição de Dados
 - DROP
 
 exemplo: 
-``` sql
+```sql
 CREATE DATABSE biblioteca; -> cria o banco de dados
 
-USE bd_biblioteca; -> confirma o banco de dados em usao para poder usar as tabelas
+USE bd_biblioteca; -- confirma o banco de dados em usao para poder usar as tabelas
 
-DROP DATABASE db_biblioteca; -> remove o banco de dados
+DROP DATABASE db_biblioteca; -- remove o banco de dados
 ```
 Observação:
 
