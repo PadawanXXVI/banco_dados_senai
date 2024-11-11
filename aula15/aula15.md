@@ -88,7 +88,7 @@ CHARSET utf8mb4;
 ## Exclusão de Banco de Dados
 
 ```SQL
-DROP tb_escola;
+DROP DATABASE tb_escola;
 ```
 
 ## Exibir os Bancos de Dados criados
@@ -139,7 +139,7 @@ DESC tb_aluno;
 ## Comando para apagar um tabela
 
 ```SQL
-DROP tb_aluno;
+DROP TABLE tb_aluno;
 ```
 
 ## Comando para alimentar a tabela
