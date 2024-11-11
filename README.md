@@ -41,6 +41,7 @@ Período de realização de 01/10/24 a 12/12/24
 | Aula 13* | 06.11.24 | Atividade de modelagem | [Aula13](aula13) |
 | Aula 14* | 07.11.24 | 2ª Avaliação | [Aula 14](aula14/) |
 | Aula 15* | 08.11.24 | Introdução a SQL | [Aula15](aula15/) |
+| Aula 16* | 11.11.24 | | [Aula16](aula16/) |
 
 ## Miscelânea
 
