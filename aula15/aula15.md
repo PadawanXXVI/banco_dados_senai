@@ -70,3 +70,101 @@ São regras aplicadas às colunas:
 - DATE
 - TIME
 - DECIMAL ou DEC
+
+# COMANDOS UTILIZADOS EM SALA DE AULA
+
+## Criação de Banco de Dados
+
+```SQL 
+-- Criação simples
+CREATE DATABASE db_escola; -- por convenção usar db_nome para criação de banco de dados.
+
+-- Criação com restrição (caso o database não exista e com definição dos caracteres)
+CREATE DATABASE IF NOT EXISTS db_escola
+COLLATE utf8mb4_generic_ci
+CHARSET utf8mb4;
+```
+
+## Exclusão de Banco de Dados
+
+```SQL
+DROP tb_escola;
+```
+
+## Exibir os Bancos de Dados criados
+
+```SQL
+SHOW DATABASES;
+```
+## Escolher em que Banco de Dados Criar as tabelas
+
+```SQL
+USE db_escola;
+```
+
+## Criação de Tabela
+
+```SQL
+-- Criação simples, apenas o nome da tabela e os atributos e o tipo de dado do atributo
+CREATE TABLE tb_aluno ( -- convenção tb_nome
+    id_aluno INT,
+    nome VARCHAR(125),
+    email VARCHAR(125),
+    data_nascimento DATE
+);
+
+-- Criação com restrições nos atributos
+CREATE TABLE tb_aluno(
+    id_aluno INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(125) NOT NULL,
+    email VARCHAR(125) NOT NULL,
+    data_nascimento DATE NOT NULL
+);
+```
+
+## Exibir tabelas criadas
+
+```SQL
+SHOW TABLES;
+```
+
+## Exibir os detalhes de uma tabela
+
+```SQL
+DESCRIBE tb_aluno;
+-- ou
+DESC tb_aluno;
+```
+
+## Comando para apagar um tabela
+
+```SQL
+DROP tb_aluno;
+```
+
+## Comando para alimentar a tabela
+
+```SQL
+INSERT INTO tb_aluno
+    (id_aluno,nome,email,data_nascimento)
+VALUES
+    (1,'Anderson de Matos Guimarães',anderson@email.com,20010926); -- data no formato Ano Mês Dia
+```
+
+## Comandos para visualizar as tabelas com os dados inseridos
+
+```SQL
+-- todas as colunas
+SELECT * FROM tb_aluno;
+
+-- uma coluna específica
+SELECT nome FROM tb_aluno; -- exibir os dados da coluna nome da tabela tb_aluno
+
+-- mais de uma coluna
+SELECT nome,data_nascimento FROM tb_aluno;
+```
+## Comando para alterar o nome da tabela
+
+```SQL
+RENAME TABLE tb_aluno TO tb_pessoa;
+```
