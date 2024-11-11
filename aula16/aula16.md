@@ -78,3 +78,23 @@ CREATE TABLE tb_plano(
     valor DECIMAL(5,2) UNSIGNED, -- UNSIGNED não permite valores negativos.
     ano YEAR DEFAULT '2024');
 ```
+
+## Criar coluna na primeira posição
+
+```SQL
+ALTER TABLE tb_plano
+ADD id_plano INT FIRST
+```
+
+## Colocar o campo como PK
+
+```SQL
+ALTER TABLE tb_plano
+ADD PRIMARY KEY (id_plano);
+```
+
+## Mostrar a tabela preenchida
+
+```SQL
+DESC tb_plano;
+```

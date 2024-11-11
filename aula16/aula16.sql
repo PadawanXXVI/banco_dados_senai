@@ -62,3 +62,16 @@ CREATE TABLE tb_plano(
     descrição TEXT,
     valor DECIMAL(5,2) UNSIGNED, -- UNSIGNED informa que não recebe valores negativos
     ano YEAR DEFAULT '2024'); -- YEAR retorna apenas o ano
+
+USE db_academia;
+
+-- Criar coluna na primeira posição
+ALTER TABLE tb_plano
+ADD id_plano INT FIRST;
+
+-- Colocar o campo como PK
+ALTER TABLE tb_plano
+ADD PRIMARY KEY (id_plano);
+
+-- Verficar os campos preenchidos
+DESC tb_plano;
