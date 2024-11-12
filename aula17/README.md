@@ -96,3 +96,6 @@ WHERE id_funcionario = '9';
 
 ```SQL
 TRUNCATE TABLE tb_funcionario;
+```
+
+[PÁGINA INICIAL](../README.md)
