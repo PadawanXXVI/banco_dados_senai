@@ -1,7 +1,7 @@
-CREATE DATABASE db_mercearia;
+CREATE DATABASE IF NOT EXISTS db_mercearia;
 USE db_mercearia;
 
-CREATE TABLE tb_produto(
+CREATE TABLE IF NOT EXISTS tb_produto(
 	id_produto INT PRIMARY KEY AUTO_INCREMENT,
     nome_produto VARCHAR(100),
     descricao_produto TEXT,
