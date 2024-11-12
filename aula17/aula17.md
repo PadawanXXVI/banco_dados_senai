@@ -47,3 +47,52 @@ INSERT INTO tb_funcionario (id_funcionario, nome, cargo, salario, departamento) 
 ```SQL
 SELECT * FROM tb_funcionario;
 ```
+
+## Alterar o dado de uma coluna específica
+
+```SQL
+UPDATE tb_funcionario
+SET salario ='5000.00'
+WHERE id_funcionario ='1';
+```
+
+## Alterar os dados de duas colunas
+
+```SQL
+UPDATE tb_funcionario
+SET nome = 'Luiza Nunes', departamento = 'Financeiro'
+WHERE id_funcionario = '6'
+```
+
+## Alterar os dados de uma coluna que possuem um campo comum, no caso departamento TI, usa a coluna no WHERE
+
+```SQL
+UPDATE tb_funcionario
+SET salario = '2000'
+WHERE departamento = 'TI';
+```
+
+### Observações:
+
+- UPDATE - atualize
+- SET - configure
+- WHERE - onde
+
+## Apagar todos os registros vinculados a uma entrada em comum, no exemplo, ao dado da coluna departamento onde há TI
+
+```SQL
+DELETE FROM tb_funcionario
+WHERE departamento = 'TI';
+```
+
+## Apagar um regsitro específico
+
+```SQL
+DELETE FROM tb_funcionario
+WHERE id_funcionario = '9';
+```
+
+## Apagar todos os registros
+
+```SQL
+TRUNCATE TABLE tb_funcionario;

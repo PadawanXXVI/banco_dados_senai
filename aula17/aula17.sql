@@ -32,3 +32,37 @@ INSERT INTO tb_funcionario (id_funcionario, nome, cargo, salario, departamento) 
 
 -- Visualizar a tabela com so dados inseridos
 SELECT * FROM tb_funcionario;
+
+-- Atualizar o valor de uma entrada em uma coluna específica
+UPDATE tb_funcionario 
+SET salario ='5000'
+WHERE id_funcionario = '1'; -- A cláusula WHERE informa onde incluir, sem não for informado, poderá alterar todos os dados da coluna
+
+-- Atualizar o valor da entrada de valor de duas colunas
+UPDATE tb_funcionario
+SET nome ='Luiza Nunes', departamento ='Financeiro'
+WHERE id_funcionario ='6';
+
+-- Alterar os dados de uma coluna que possuem um campo comum, no caso departamento TI, usa a coluna no WHERE
+UPDATE tb_funcionario
+SET salario = '2000'
+WHERE departamento = 'TI'; -- nesse caso, o sistema pode bloquear mais de uma alteração simultânea (MySQL Workbench)
+
+/*
+UPDATE - atualize
+SET - configure
+WHERE - onde
+*/
+
+-- Apaga todos os registros vinculados a uma entrada em comum, no caso o departamento de TI
+DELETE FROM tb_funcionario
+WHERE departamento ='TI';
+
+SELECT * FROM tb_funcionario;
+
+-- Apaga a entrada de um registro específico
+DELETE FROM tb_funcionario
+WHERE id_funcionario = '9';
+
+-- Apagar todos os registros
+TRUNCATE TABLE tb_funcionario;
