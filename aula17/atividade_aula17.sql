@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS tb_produto(
     data_fabricacao DATE,
     data_validade DATE,
     fornecedor VARCHAR(100));
-
+    
 INSERT INTO tb_produto
 	(id_produto, nome_produto, descricao_produto, preco, quantidade, data_fabricacao, data_validade, fornecedor)
 VALUES
@@ -25,6 +25,7 @@ VALUES
 (9, 'Sabão Líquido', 'Sabão líquido para roupas', 25.00, 60, '2023-09-10', '2024-09-10', 'Fornecedor G'), 
 (10, 'Álcool Gel', 'Álcool gel 70%', 8.00, 500, '2024-05-01', '2026-05-01', 'Fornecedor H'); 
 
+SELECT * FROM tb_produto;
     
 -- 1. Altere o tipo do campo nome_produto para VARCHAR(150) na tabela tb_produto. 
 ALTER TABLE tb_produto
