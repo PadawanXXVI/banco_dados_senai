@@ -2,7 +2,7 @@ CREATE DATABASE IF NOT EXISTS db_loja_virtual;
 USE db_loja_virtual;
 
 CREATE TABLE tb_produto(
-	id_produto INTEGER PRIMARY KEY,
+	id_produto INTEGER PRIMARY KEY AUTO_INCREMENT,
     nome_produto VARCHAR(50),
     descricao_produto VARCHAR(100),
     preco_produto FLOAT
@@ -19,6 +19,8 @@ CREATE TABLE tb_pedido(
 	id_pedido INTEGER PRIMARY KEY,
     data_pedido DATE
 );
+
+DESC tb_produto;
 
 ALTER TABLE tb_produto
 MODIFY COLUMN descricao_produto VARCHAR(150);
