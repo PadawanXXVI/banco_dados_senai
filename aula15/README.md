@@ -177,4 +177,4 @@ SELECT nome,data_nascimento FROM tb_aluno;
 ```SQL
 RENAME TABLE tb_aluno TO tb_pessoa;
 ```
-[PÁGINA INICIAL](README.md)
+[PÁGINA INICIAL](../README.md)
