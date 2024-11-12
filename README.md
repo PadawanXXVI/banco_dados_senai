@@ -42,7 +42,7 @@ Período de realização de 01/10/24 a 12/12/24
 | Aula 14* | 07.11.24 | 2ª Avaliação | [Aula 14](aula14/) |
 | Aula 15* | 08.11.24 | Introdução a SQL | [Aula15](aula15/) |
 | Aula 16* | 11.11.24 | Comando ALTER e seus subcomandos | [Aula16](aula16/) |
-| Aula 17* | 12.11.24 | Comando UPDATE| [Aula17](aula17/) |
+| Aula 17* | 12.11.24 | Comandos UPDATE, DELETE e TRUNCATE| [Aula17](aula17/) |
 
 ## Miscelânea
 
