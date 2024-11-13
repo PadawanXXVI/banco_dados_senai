@@ -102,7 +102,7 @@ WHERE id_produto = '8';
 
 -- 18. Adicione o campo data_entrada do tipo DATE para registrar a data de entrada dos produtos em estoque
 ALTER TABLE tb_produto
-ADD COLUMN data_entrega DATE;
+ADD COLUMN data_entrada DATE;
 
 -- 19. Atualize o campo estoque_atual para 50 para todos os produtos onde o preco_unitario seja igual que 10.00. 
 UPDATE tb_produto
