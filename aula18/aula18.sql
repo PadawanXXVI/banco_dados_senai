@@ -1,21 +1,14 @@
-# OPERADORES LÓGICOS E RELACIONAIS (COMPARAÇÃO)
+/*
+Aula 04 - Operadores Lógicos e Relacionais (comparação)
+*/
 
-## Criar o Banco de Dados
-
-```SQL 
-CREATE DATABASE db_loja;
-```
-
-## Selecionar o Banco de Dados
-
-```SQL 
+-- Criar e selecionar o Banco de Dados
+CREATE DATABASE IF NOT EXISTS db_loja;
 USE db_loja;
-```
 
-## Criar tabela
 
-```SQL
-CREATE TABLE tb_produto (
+-- Criar tabela
+CREATE TABLE IF NOT EXISTS tb_produto (
     id INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(100),
     categoria VARCHAR(50),
@@ -24,11 +17,7 @@ CREATE TABLE tb_produto (
     fornecedor VARCHAR(50)
 );
 
-```
-
-## Alimentar a tabela
-
-```SQL
+-- Alimentar a tabela
 INSERT INTO tb_produto (nome, categoria, preco, quantidade_estoque, fornecedor)
 VALUES
     ('Notebook Dell Inspiron', 'Eletrônicos', 3500.00, 10, 'Dell'),
@@ -46,12 +35,16 @@ VALUES
     ('Fone de Ouvido JBL Tune', 'Eletrônicos', 120.00, 45, 'JBL'),
     ('Mouse Gamer Logitech G203', 'Eletrônicos', 150.00, 60, 'Logitech'),
     ('Forno Elétrico Philco', 'Eletrodomésticos', 800.00, 10, 'Philco');
-```
 
-## Visualizar a tabela com os campos preenchidos
-
-```SQL
+-- Visualizar a tabela com os campos preenchidos
 SELECT * FROM tb_produto;
-```
 
-[Página Inicial](../README.md)
+-- Operador Lógico AND/e
+SELECT * FROM tb_produto
+WHERE categoria = 'eletrônicos'
+AND preco > '1000';
+
+-- Operador Lógico OR/ou
+SELECT * FROM tb_produto
+WHERE categoria = 'eletrônicos'
+OR preco > '1000';
