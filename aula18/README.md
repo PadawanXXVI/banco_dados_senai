@@ -54,4 +54,34 @@ VALUES
 SELECT * FROM tb_produto;
 ```
 
+## OPerador Lógico AND
+
+```SQL
+SELECT * FROM tb_produto
+WHERE categoria = 'eletrônicos'
+AND preco > '1000';
+```
+
+## Operador Lógico OR
+
+```SQL
+SELECT * FROM tb_produto
+WHERE categoria = 'eletrônicos'
+OR preco > '1000';
+```
+
+## Operador Lógico NOT
+
+```SQL
+SELECT * FROM tb_produto
+WHERE NOT categoria = 'eletrônicos';
+```
+
+## Operador relacional BETWEEN
+```SQL
+SELECT * FROM tb_produto
+WHERE preco BETWEEN 500 AND 2500;
+```
+
+
 [Página Inicial](../README.md)
