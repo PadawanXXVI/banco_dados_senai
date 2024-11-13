@@ -1,7 +1,7 @@
 CREATE DATABASE IF NOT EXISTS db_cinema;
 USE db_cinema;
 
-CREATE TABLE tb_filme(
+CREATE TABLE IF NOT EXISTS tb_filme(
 	id_filme INT PRIMARY KEY AUTO_INCREMENT,
     titulo VARCHAR(100),
     genero VARCHAR(100),
