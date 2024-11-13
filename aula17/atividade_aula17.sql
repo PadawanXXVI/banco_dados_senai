@@ -62,7 +62,7 @@ ALTER TABLE tb_produto
 DROP COLUMN fornecedor;
 
 -- 9. Atualize o campo quantidade para 0 onde o data_validade é anterior a 2024-10-01. 
-UPDATE tb_aluno
+UPDATE tb_produto
 SET quantidade = '0'
 WHERE data_validade < 2024-10-01;
 
