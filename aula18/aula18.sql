@@ -48,3 +48,40 @@ AND preco > '1000';
 SELECT * FROM tb_produto
 WHERE categoria = 'eletrônicos'
 OR preco > '1000';
+
+-- Operador Lógico NOT/não
+SELECT * FROM tb_produto
+WHERE NOT categoria = 'eletrônicos';
+
+-- Operador Relacional BETWEEN/entre: mostra se o valor na coluna estiver entre o escolhido
+SELECT * FROM tb_produto
+WHERE preco BETWEEN 500 AND 2500;
+
+-- Operador Relacional IN: verifica se o valor da coluna é o mesmo do valor escolhido
+SELECT * FROM tb_produto
+WHERE fornecedor IN ('LG', 'Samsung', 'Dell');
+
+-- Operador Relacional LIKE: comparador
+SELECT * FROM tb_produto
+WHERE nome LIKE 'M%'; -- pesquisa tudo que começa com 'm'. Obs: % após o m informa que começa com m, se fosse antes, informa que termina com m
+
+SELECT * FROM tb_produto
+WHERE nome LIKE '%on%'; -- pesquisa onde houver 'on' no meio da palavra.
+/*
+Exemplos:
+%Silva - onde começa com Silva
+Silva% - onde termina com Silva
+%Silva% - pesquisa onde tiver Silva, independentemente da posição
+*/
+
+-- Operador > (maior)
+SELECT * FROM tb_produto
+WHERE quantidade_estoque > 20;
+
+-- Operador > (menor)
+SELECT * FROM tb_produto
+WHERE quantidade_estoque < 20;
+
+-- Operador != OU <> (diferente)
+SELECT * FROM tb_produto
+WHERE categoria <> 'eletrônicos';
