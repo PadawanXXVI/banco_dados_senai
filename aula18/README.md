@@ -83,5 +83,45 @@ SELECT * FROM tb_produto
 WHERE preco BETWEEN 500 AND 2500;
 ```
 
+## Operador relacional IN
+
+```SQL
+SELECT * FROM tb_produto
+WHERE fornecedor IN ('LG', 'Samsung','Dell');
+```
+
+## Operador relacional LIKE
+
+```SQL
+SELECT * FROM tb_produto
+WHERE nome LIKE '%on';
+/*
+Observações referente a posição do símbolo %:
+%Silva - começa com SILVA
+Silva% - termina com SILVA
+%Silva% - contém o nome SILVA em qualquer posição
+*/
+```
+
+## Operador > (maior) ou >= (maior igual)
+
+```SQL
+SELECT * FROM tb_produto
+WHERE quantidade_estoque > 20;
+```
+
+## Operador < (menor) ou <= (menor igual)
+
+```SQL
+SELECT * FROM tb_produto
+WHERE quantidade_estoque < 20;
+```
+
+## Operador != OU <> (diferente: pode usar um dos dois)
+
+```SQL
+SELECT * FROM tb_produto
+WHERE categoria <> 'eletrônicos';
+```
 
 [Página Inicial](../README.md)
