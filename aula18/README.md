@@ -8,7 +8,7 @@ CREATE DATABASE db_loja;
 
 ## Selecionar o Banco de Dados
 
-```SQL 
+```SQL
 USE db_loja;
 ```
 
@@ -29,7 +29,8 @@ CREATE TABLE tb_produto (
 ## Alimentar a tabela
 
 ```SQL
-INSERT INTO tb_produto (nome, categoria, preco, quantidade_estoque, fornecedor)
+INSERT INTO tb_produto 
+    (nome, categoria, preco, quantidade_estoque, fornecedor)
 VALUES
     ('Notebook Dell Inspiron', 'Eletrônicos', 3500.00, 10, 'Dell'),
     ('Smartphone Samsung Galaxy', 'Eletrônicos', 1500.00, 25, 'Samsung'),
