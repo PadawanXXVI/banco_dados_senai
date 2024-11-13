@@ -23,7 +23,12 @@ Período de realização de 01/10/24 a 12/12/24
 | Aula 11 | 16.10.24 | MySql Workbench | |
 | Aula 12 | 17.10.24 | | |
 | Aula 13 | 18.10.24 | | |
-| Aula 01* | 21.10.24| Apresentação da disciplina, cronograma da disciplina |[Aula01](aula01) |
+
+## Aulas com o professor Ygor
+
+| AULA | DATA | CONTEÚDO | LINK |
+| :-:| :-: | :- | -: |
+| Aula 01* | 21.10.24 | Apresentação da disciplina, cronograma da disciplina |[Aula01](aula01) |
 | Aula 02* | 22.10.24 | Introdução a Banco de Dados | [Aula02](aula02) |
 | Aula 02* | 22.10.24 | Modelo Relacional | [Aula02](aula02/modelo_relacional.md) |
 | Aula 03* | 23.10.24 | Abstração de Dados e Modelagem de Dados |[Aula03](aula03) |
