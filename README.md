@@ -2,7 +2,7 @@
 
 Curso do Senai DF administrado na unidade SIG
 
-Curso ministrado pelo professor Cézar Dias até o dia 11.10.24
+Curso ministrado pelo professor Cézar Dias até o dia 18.10.24
 
 Curso ministrado pelo professor Ygor a partir do dia 21.10.24
 
@@ -43,6 +43,7 @@ Período de realização de 01/10/24 a 12/12/24
 | Aula 15* | 08.11.24 | Introdução a SQL - Aula 01 SQL| [Aula15](aula15/) |
 | Aula 16* | 11.11.24 | Comando ALTER e seus subcomandos - Aula 02 SQL| [Aula16](aula16/) |
 | Aula 17* | 12.11.24 | Comandos UPDATE, DELETE e TRUNCATE - Aula 03 SQL| [Aula17](aula17/) |
+| Aula 18* | 13.11.24 |  - Aula 04 SQL | [Aula18](aula18/)|
 
 ## Miscelânea
 
