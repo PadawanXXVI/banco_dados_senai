@@ -49,7 +49,7 @@ Período de realização de 01/10/24 a 12/12/24
 | Aula 16* | 11.11.24 | Comando ALTER e seus subcomandos - Aula 02 SQL| [Aula16](aula16/) |
 | Aula 17* | 12.11.24 | Comandos UPDATE, DELETE e TRUNCATE - Aula 03 SQL| [Aula17](aula17/) |
 | Aula 18* | 13.11.24 | Operadores Lógicos e Relacionais - Aula 04 SQL | [Aula18](aula18/) |
-| Aula 19* | 14.11.24 | - Aula 05 SQL | [Aula19](aula19/) |
+| Aula 19* | 14.11.24 | Correção atividade aula 18 e nova atividade - Aula 05 SQL | [Aula19](aula19/) |
 
 ## Miscelânea
 
