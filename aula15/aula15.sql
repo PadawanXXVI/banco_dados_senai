@@ -32,6 +32,7 @@ SHOW TABLES;
 
 -- comando para mostrar a descrição da tabela
 DESCRIBE tb_aluno;
+-- OU
 DESC tb_aluno;
 
 -- comando para apagar tabela
@@ -49,9 +50,9 @@ DESC tb_aluno;
 
 -- comando para alimentar a tabela
 INSERT INTO tb_aluno
-	(id_aluno,nome,email,data_nascimento)
+	(id_aluno,nome,email,data_nascimento) -- lista com todas as colunas criadas (atributos)
 VALUES 
-    (1,'Maria','maria@email.com',20001020); -- data ANOMÊSDIA
+    (1,'Maria','maria@email.com',2000-10-20); -- Valores das colunas de acordo com a ordem informada acima. Obs.: data no formato ANO-MÊS-DIA
     
 -- comando para visualizar a tabela com os dados inseridos
 SELECT * FROM tb_aluno; -- o asterisco informa que quer trazer todas as colunas
@@ -60,7 +61,7 @@ SELECT * FROM tb_aluno; -- o asterisco informa que quer trazer todas as colunas
 SELECT nome FROM tb_aluno; -- informa quais colunas quer visualizar colocando o nome delas no lugar do asterisco
 
 -- comando para visualizar mais de uma coluna
-SELECT nome,email FROM tb_aluno;
+SELECT nome, email FROM tb_aluno;
 
 -- comando para alterar o nome da tabela
 RENAME TABLE tb_aluno TO tb_pessoa;
