@@ -69,8 +69,8 @@ SELECT * FROM tb_produto
 WHERE nome LIKE '%on%'; -- pesquisa onde houver 'on' no meio da palavra.
 /*
 Exemplos:
-%Silva - onde começa com Silva
-Silva% - onde termina com Silva
+Silva% - onde começa com Silva
+%Silva - onde termina com Silva
 %Silva% - pesquisa onde tiver Silva, independentemente da posição
 */
 
