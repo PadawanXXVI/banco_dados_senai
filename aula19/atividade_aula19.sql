@@ -114,7 +114,7 @@ WHERE data_lancamento > '2015-12-31';
  WHERE nome LIKE '%Legend%';
  
  -- 18. Selecionar jogos com estoque menor ou igual a 60
-DELETE FROM tb_jogos
+SELECT * FROM tb_jogos
 WHERE estoque <= '60';
 
 -- DROP DATABASE db_loja_de_jogos;
