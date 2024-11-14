@@ -142,3 +142,5 @@ WHERE cidade IN ('Brasília', 'Goiânia') AND nota BETWEEN '6' AND '10';
  
 -- 30. Apague todos os dados da tabela onde estão os registros dos alunos, sem remover sua estrutura.
 TRUNCATE TABLE tb_estudante;
+
+-- DROP DATABASE db_escola;
