@@ -45,6 +45,7 @@ AND duracao > '130';
 SELECT * FROM tb_filme
 WHERE genero LIKE 'Ficção científica'
 AND classificacao_indicativa = '14 anos' OR classificacao_indicativa = '16 anos';
+-- AND classificacao_indicativa IN ('14 anos', '16 anos') : poderia ser utilizado o IN
 
 -- 5. Quais filmes não são de gênero "Aventura" e têm duração entre 120 e 180 minutos?
 SELECT * FROM tb_filme
