@@ -66,7 +66,7 @@ WHERE genero IN ('Battle Royale', 'Party');
 
 -- 6. Selecionar jogos lançados depois de 2015
 SELECT * FROM tb_jogos
-WHERE data_lancamento > '2015-12-31';
+WHERE data_lancamento > '2015-12-31';  --  precisa colocar as aspas para identifiar corretamente a data
 
  -- 7. Selecionar jogos que não são do gênero 'FPS'
  SELECT * FROM tb_jogos
