@@ -99,10 +99,18 @@ ALTER TABLE nome_da_tabela
 RENAME TO novo_nome_da_tabela;
 ```
 
-### Listar as tabelas criadas
+### 11 Listar as tabelas criadas
 
 ```SQL
 SHOW TABLES;
+```
+
+### Mostrar a tabela com as colunas e dados inseridos (se houver)
+
+```SQL
+DESCRIBE nome_da_tabela;
+-- OU
+DESC nome_da_tabela;
 ```
 
 
