@@ -53,7 +53,7 @@ WHERE sexo = 'f' AND cidade ='Brasília';
  
 -- 8. Exiba os alunos que têm nota maior que 5 e são do sexo masculino. 
 SELECT * FROM tb_aluno
-WHERE nota > 5 AND sexo = 'M';
+WHERE nota > '5' AND sexo = 'M';
  
 -- 9. Exiba os alunos que têm nota entre 6 e 8. 
 SELECT * FROM tb_aluno
@@ -80,7 +80,7 @@ SELECT * FROM tb_aluno
 WHERE nome LIKE 'A%';
  
 -- 15. Exiba todos os alunos cuja cidade termina com a letra "a". 
-SELECT * FROM tb_aluno
+SELECT nome FROM tb_aluno
 WHERE cidade LIKE '%a';
  
 -- 16. Adicione uma coluna `data_nascimento` do tipo `DATE` à tabela `alunos`. 
@@ -138,7 +138,9 @@ WHERE cidade = 'Samambaia';
  
 -- 29. Selecione todos os alunos do sexo feminino que estão nas cidades de “Brasília” ou “Goiânia” e têm notas entre 6 e 10. 
 SELECT * FROM tb_estudante
-WHERE cidade IN ('Brasília', 'Goiânia') AND nota BETWEEN '6' AND '10';
+WHERE genero = 'f' 
+AND cidade IN ('Brasília', 'Goiânia') 
+AND nota BETWEEN '6' AND '10';
  
 -- 30. Apague todos os dados da tabela onde estão os registros dos alunos, sem remover sua estrutura.
 TRUNCATE TABLE tb_estudante;
