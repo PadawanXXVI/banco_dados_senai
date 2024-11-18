@@ -4,6 +4,9 @@ CREATE DATABASE IF NOT EXISTS db_escola;
 -- SELECÇÃO DO BANCO DE DADOS
 USE db_escola;
 
+-- Exclusão da tabela anterior
+DROP TABLE tb_aluno;
+
 -- CRIAÇÃO DA TABELA ALUNO
 CREATE TABLE IF NOT EXISTS tb_aluno(
 	id_aluno INT AUTO_INCREMENT PRIMARY KEY,
