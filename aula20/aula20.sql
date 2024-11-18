@@ -66,7 +66,7 @@ VALUES
 -- Visualizar os dados da tabela
 SELECT * FROM tb_funcionario;
 
--- Visualizar apenas o departamwento
+-- Visualizar apenas o departamento
 SELECT departamento FROM tb_funcionario;
 
 -- Uso do DISTINCT 
