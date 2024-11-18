@@ -50,6 +50,7 @@ Período de realização de 01/10/24 a 12/12/24
 | Aula 17* | 12.11.24 | Comandos UPDATE, DELETE e TRUNCATE - Aula 03 SQL| [Aula17](aula17/) |
 | Aula 18* | 13.11.24 | Operadores Lógicos e Relacionais - Aula 04 SQL | [Aula18](aula18/) |
 | Aula 19* | 14.11.24 | I Revisão | [Aula19](aula19/) |
+| Aula 20* | 18.11.24 | | [Aula20](aula20/) |
 
 ## Miscelânea
 
