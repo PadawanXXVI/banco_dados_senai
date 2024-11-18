@@ -130,5 +130,27 @@ LIMIT 10; --  apenas os 10 primeiros registros encontrados
 SELECT SUM(salario) FROM tb_funcinario;
 ```
 
+## Uso do SUM com mais de uma coluna
+
+```SQL
+SELECT SUM(salario) - SUM(carga_horaria) FROM tb_funcionario;
+```
+
+## Uso do AVG: calcula a média dos valores de uma coluna
+
+```SQL
+SELECT AVG(salario) FROM tb_funcionario;
+```
+
+## Uso do AS: renomeia o nome da coluna de retorno na consulta
+
+```SQL
+SELECT AVG(salario) AS `Média de Salário` FROM tb_funcionario;
+/*
+Observações:
+Se o houver espaço em branco entre as palvaras, usar entre `` (crases)
+Se não houver espaço em branco, por exemplo, uso de _ (underscore), não precisa do uso das `` (crases)
+*/
+```
 
 [Página Inicial](../README.md)
