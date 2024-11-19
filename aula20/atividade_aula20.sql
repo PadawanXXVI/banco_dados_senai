@@ -2,6 +2,8 @@
 CREATE DATABASE IF NOT EXISTS db_empresa2;
 USE db_empresa2;
 
+DROP TABLE tb_funcionario;
+ 
 -- Criação da tabela
 CREATE TABLE IF NOT EXISTS tb_funcionario (
     id_funcionario INT PRIMARY KEY AUTO_INCREMENT,
@@ -57,7 +59,7 @@ VALUES
 ('Gustavo Sales', '10234567890', '61999930030', 'gustavo.sales@email.com', 'Rua AD, 3000', '1983-10-29', 'masculino', '2018-11-10', 40, 4800.00, 'Financeiro', 'Gerente', 'CLT', 'ativo');
 
 -- 1. Liste todos os diferentes departamentos na tabela.
-SELECT * FROM tb_funcionario;
+SELECT DISTINCT departamento FROM tb_funcionario;
 
 -- 2. Qual é o salário total dos funcionários da empresa?
 SELECT SUM(salario) FROM tb_funcionario;
@@ -98,7 +100,7 @@ SELECT DISTINCT cargo FROM tb_funcionario;
 SELECT SUM(carga_horaria) FROM tb_funcionario;
 
 -- 13. Qual é o maior salário entre os funcionários do departamento de TI?
-SELECT nome, MAX(salario), departamento FROM tb_funcionario
+SELECT nome, MAX(salario) AS `Maior salário`, departamento FROM tb_funcionario
 WHERE departamento = 'TI';
 
 -- 14. Qual é a menor carga horária entre os estagiários?
