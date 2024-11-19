@@ -100,7 +100,7 @@ SELECT DISTINCT cargo FROM tb_funcionario;
 SELECT SUM(carga_horaria) FROM tb_funcionario;
 
 -- 13. Qual é o maior salário entre os funcionários do departamento de TI?
-SELECT nome, MAX(salario) AS `Maior salário`, departamento FROM tb_funcionario
+SELECT MAX(salario) AS Maior_salario FROM tb_funcionario
 WHERE departamento = 'TI';
 
 -- 14. Qual é a menor carga horária entre os estagiários?
