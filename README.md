@@ -51,6 +51,7 @@ Período de realização de 01/10/24 a 12/12/24
 | Aula 18* | 13.11.24 | Operadores Lógicos e Relacionais - Aula 04 SQL | [Aula18](aula18/) |
 | Aula 19* | 14.11.24 | I Revisão | [Aula19](aula19/) |
 | Aula 20* | 18.11.24 | DISTINCT e Funções de Agregação (COUNT, SUM, AVG, MIN e MAX) | [Aula20](aula20/) |
+| Aula 21* | 19.11.24 | II Revisão | [Aula19](aula19/) |
 
 ## Miscelânea
 
