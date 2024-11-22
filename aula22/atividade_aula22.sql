@@ -32,6 +32,7 @@ VALUES
 SELECT DISTINCT cliente FROM tb_venda;
 
 -- 2. Quantos clientes diferentes realizaram compras?
+SELECT COUNT(cliente) FROM tb_venda;
 
 -- 3. Liste as categorias distintas de produtos vendidos.
 SELECT DISTINCT categoria FROM tb_venda;
