@@ -2,6 +2,7 @@
 CREATE DATABASE IF NOT EXISTS db_loja_eletronicos;
 USE db_loja_eletronicos;
 
+DROP TABLE tb_produto;
 -- CRIAÇÃO DA TABELA
 CREATE TABLE tb_produto(
 	id_produto INT PRIMARY KEY AUTO_INCREMENT,
@@ -56,7 +57,7 @@ SELECT nome, categoria, preco FROM tb_produto
 WHERE categoria = 'eletrônicos' AND preco > '2000';
 
 -- 2. Produtos de decoração ou móveis
-SELECT nome FROM tb_produto
+SELECT nome, categoria FROM tb_produto
 WHERE categoria IN ('decoração', 'móveis');
 
 -- 3. Produtos das marcas 'Apple', 'Samsung' ou 'Sony'
@@ -76,7 +77,7 @@ WHERE quantidade = '2';
 
 -- 6. Atualizar status para 'Esgotado' onde quantidade é 0
 UPDATE tb_produto
-SET status_estoque = 'esgotado'
+SET status_estoque = 'Esgotado'
 WHERE quantidade = '0';
 
 -- 7. Renomear a coluna 'quantidade' para 'estoque_disponivel'
@@ -84,11 +85,12 @@ ALTER TABLE tb_produto
 CHANGE COLUMN quantidade estoque_disponivel INT;
 
 -- 8. Selecionar categorias distintas
-SELECT DISTINCT categoria from tb_produto
+SELECT DISTINCT categoria FROM tb_produto
 ORDER BY categoria;
 
 -- 9. Contar produtos com status 'Em Estoque'
-SELECT COUNT(*), status_estoque FROM tb_produto;
+SELECT COUNT(status_estoque) FROM tb_produto
+WHERE status_estoque = 'Em Estoque';
 
 -- 10. Somar o preço total de produtos
 SELECT SUM(preco) AS `Valor total do estoque` FROM tb_produto;
@@ -103,19 +105,17 @@ SELECT MAX(preco) AS `maior valor` FROM tb_produto;
 SELECT MIN(preco) FROM tb_produto;
 
 -- 14. Contar itens agrupados por categoria
-SELECt categoria, COUNT(categoria) FROM tb_produto
-GROUP BY categoria
-ORDER BY categoria;
+SELECT categoria, COUNT(categoria) FROM tb_produto
+GROUP BY categoria;
 
 -- 15. Categorias com mais de 5 produtos
-SELECT categoria,COUNT(categoria) FROM tb_produto
+SELECT categoria, COUNT(categoria) FROM tb_produto
 GROUP BY categoria
 HAVING 	COUNT(categoria) > '5';
 
 -- 16. Preço médio agrupado por marca
 SELECT marca, AVG(preco) FROM tb_produto
-GROUP BY marca
-ORDER BY marca;
+GROUP BY marca;
 
 -- 17. Marcas com preço médio acima de 2000
 SELECT marca, AVG(preco) FROM tb_produto
@@ -156,7 +156,7 @@ WHERE preco IN ('300', '1200', '2500')
 ORDER BY preco;
 
 -- 25. Total de produtos vendidos após 01/09/2024
-SELECT nome, data_venda FROM tb_produto
+SELECT COUNT(nome) FROM tb_produto
 WHERE data_venda > '2024-09-01';
 
 -- 26. Soma dos preços agrupados por marca
@@ -174,8 +174,7 @@ GROUP BY categoria;
 
 -- 29. Produtos vendidos antes de 01/09/2024 com estoque maior que 5
 SELECT nome, data_venda, estoque_disponivel FROM tb_produto
-WHERE data_venda < '2024-09-01' AND estoque_disponivel > 5
-ORDER BY data_venda DESC;
+WHERE data_venda < '2024-09-01' AND estoque_disponivel > '5';
 
 -- 30. Quantidade total de produtos por marca com total maior que 5
 SELECT marca, COUNT(nome) AS `total de produto` FROM tb_produto
