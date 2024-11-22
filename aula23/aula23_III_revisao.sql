@@ -178,6 +178,6 @@ WHERE data_venda < '2024-09-01' AND estoque_disponivel > 5
 ORDER BY data_venda DESC;
 
 -- 30. Quantidade total de produtos por marca com total maior que 5
-SELECT COUNT(nome), marca, estoque_disponivel FROM tb_produto
+SELECT marca, COUNT(nome) AS `total de produto` FROM tb_produto
 GROUP BY marca
-HAVING estoque_disponivel > '5';
+HAVING COUNT(nome) > '5';
