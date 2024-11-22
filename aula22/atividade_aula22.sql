@@ -1,8 +1,11 @@
+-- Criação do banco de dados e seleção para uso
 CREATE DATABASE IF NOT EXISTS db_eletronico;
 USE db_eletronico;
 
+-- Exclusão da tabela (para evitar erros)
 DROP TABLE tb_venda;
 
+-- Criação da tabela vendas
 CREATE TABLE IF NOT EXISTS tb_venda(
     id_venda INT PRIMARY KEY AUTO_INCREMENT,
     cliente VARCHAR(50) NOT NULL,
@@ -12,6 +15,7 @@ CREATE TABLE IF NOT EXISTS tb_venda(
     data_venda DATE NOT NULL
 );
 
+-- Populando a tabela
 INSERT INTO tb_venda
     (id_venda, cliente, produto, categoria, valor, data_venda)
 VALUES
