@@ -4,8 +4,6 @@ DROP DATABASE db_eletronico;
 CREATE DATABASE IF NOT EXISTS db_eletronico;
 USE db_eletronico;
 
-DELETE TABLE tb_venda;
-
 -- Criação da tabela vendas
 CREATE TABLE IF NOT EXISTS tb_venda(
     id_venda INT PRIMARY KEY AUTO_INCREMENT,
@@ -35,7 +33,7 @@ SELECT * FROM tb_venda;
 SELECT DISTINCT cliente FROM tb_venda;
 
 -- 2. Quantos clientes diferentes realizaram compras?
-SELECT COUNT(DISTINCT cliente) AS `clientes diferente` FROM tb_venda;
+SELECT COUNT(DISTINCT cliente) AS `clientes diferentes` FROM tb_venda;
 
 -- 3. Liste as categorias distintas de produtos vendidos.
 SELECT DISTINCT categoria FROM tb_venda;
