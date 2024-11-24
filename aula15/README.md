@@ -151,12 +151,12 @@ INSERT INTO tb_aluno
 VALUES
     (1,'Anderson de Matos Guimarães',anderson@email.com,20010926); -- data no formato Ano Mês Dia
 /*
-Caso o id seja auto_increment, não será necessário informa a coluna id nem inserir seu valor. Mesmo com autoincremento, caso você informe o primeiro id, os próximos seguem a sequência, sem ser necessário informá-lo.
+Caso o id seja auto_increment, não será necessário informar a coluna id nem inserir seu valor. Mesmo com autoincremento, caso você informe o primeiro id, os próximos seguem a sequência, sem ser necessário informá-lo.
 Outro valor que pode ser informano no id quando ele for autonincremento é DEFAULT
 */
 
 -- Caso queira inserir em todas as colunas da tabela
-INSERT INTO tb_aluno VALUES -- basta emitir os nomes das colunas
+INSERT INTO tb_aluno VALUES -- basta omitir os nomes das colunas
     ('Maria', 'maria@email.com', 19520324);
 ```
 
