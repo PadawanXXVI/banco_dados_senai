@@ -187,3 +187,32 @@ WHERE id <= '10';
 SELECT * FROM tb_candidato
 WHERE id <> '15';
 
+/*
+DISTINCT E FUNÇÕES DE AGREGAÇÃO (COUNT, SUM, AVG, MIN, MAX)
+*/
+
+-- DISTINCT: RETORNA APENAS AS ENTRADAS ÚNICAS DA COLUNA
+SELECT DISTINCT nome FROM tb_candidato;
+
+-- COUNT: retorna o total de registros de uma tabela
+SELECT COUNT(*) FROM tb_candidato;
+
+-- USO DO COUNT COM UMA ENTRADA ESPECÍFICA
+SELECT COUNT(*) FROM tb_candidato
+WHERE nome = 'Anderson de Matos Guimarães';
+
+-- MAX
+SELECT MAX(salario) FROM tb_candidato;
+
+-- MIN
+SELECT MIN(salario) FROM tb_candidato;
+
+-- SUM
+SELECT SUM(salario) FROM tb_candidato;
+
+-- AVG
+SELECT AVG(salario) FROM tb_candidato;
+
+-- USO DO AS: RENOMEIA A COLUNA DE RETORNO
+SELECT AVG(salario) AS `Média Salarial` FROM tb_candidato;
+
