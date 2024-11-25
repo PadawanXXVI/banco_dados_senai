@@ -69,7 +69,7 @@ VALUES
 ## Correção do campo tipo de contrato (não está no original)
 
 ```SQL 
-UPDATE FROM tb_funcionario
+UPDATE tb_funcionario
 SET tipo_contrato = ('CLT', 'PJ', 'Estágio')
 WHERE tipo_contrato = ('CLT', 'PJ', 'estagiario');
 ```
