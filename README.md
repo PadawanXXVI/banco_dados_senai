@@ -61,3 +61,4 @@ Período de realização de 01/10/24 a 12/12/24
 | :- | :-: |
 | Modelo Word Atividades | [Modelo Word](modelo.dotx) |
 | Logo Senai | [Logo Senai](logo_senai.png) |
+| Rvisões para prova de SQL | [Revisões](revisoes/) |
