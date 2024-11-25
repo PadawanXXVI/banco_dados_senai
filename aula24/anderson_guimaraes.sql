@@ -159,4 +159,3 @@ MODIFY cpf VARCHAR(100) NOT NULL;
 
 -- 30. Renomeie a tabela "tb_paciente" para "tb_cliente".
 RENAME TABLE tb_paciente TO tb_cliente;
-
