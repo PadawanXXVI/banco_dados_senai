@@ -80,3 +80,5 @@ WHERE tipo_contrato = ('CLT', 'PJ', 'estagiario');
 SELECT departamento FROM tb_funcionario
 GROUP BY departamento;
 ```
+
+[Página Inicial](../README.md)
