@@ -78,7 +78,84 @@ WHERE tipo_contrato = ('CLT', 'PJ', 'estagiario');
 
 ```SQL
 SELECT departamento FROM tb_funcionario
-GROUP BY departamento;
+GROUP BY departamento; -- agrupa por departamento
+```
+
+## Contatagem dos valores
+
+```SQL
+SELECT tipo_contrato, COUNT(tipo_contrato) AS `Quantida de Funcionários`
+FROM tb_funcionário
+GROUP BY tipo_contrato; -- contagem de funcionários por tipo de contrato
+```
+
+```SQL
+SELECT genero, COUNT(genero) FROM tb_funcionario
+GROUP BY genero; -- contagem de funcionários por gênero
+```
+
+## Retornar mais de uma coluna
+
+```SQL
+SELECT nome, tipo_contrato FROM tb_funcionario
+WHERE tipo_contrato = 'PJ'; -- selecionar nome e tipo de contrato para 'pj'
+```
+
+## Uso do HAVING: fucniona como um filtro, parecido com o WHERE, porém só vai funcionar com o GROUP BY
+
+```SQL
+SELECT departamento, COUNT(departamento) FROM tb_funcionario
+GROUP BY departamento
+HAVING COUNT(departamento) > 3; -- conta o número de funcionário em cada departamento, porém, apresenta apenas os departamentos com mais de 3 funcionários
+```
+
+## Uso do HAVING para filtrar o resultado do GROUP BY
+
+```SQL
+SELECT cargo, COUNT(cargo), GROUP_CONCAT(nome SEPARATOR ', ') FROM tb_funcionario
+GROUP BY cargo
+HAVING COUNT(cargo) > 5; -- conta o número de funcionários em cada cargo e concatena os nomes dos funcionários de cada cargo, mas só mostra os cargos que têm mais de 5 funcionários.
+```
+
+## Uso do ORDER BY: ordenar
+
+## ORDEM CRESCENTE: ordem padrão
+
+```SQL
+SELECT * FROM tb _funcionario
+ORDER BY nome ASC; -- ASC/Ascending/ascendente/"aumentado"
+```
+
+## ORDEM DECRESCENTE
+
+```SQL
+SELECT * FROM tb_funcionario
+ORDER BY nome DESC; -- DESC/Descending/descendente/"diminuindo"
+```
+
+## Ordenação a partir de outra coluna que não a primeira
+
+```SQL
+SELECT nome, departamento FROM tb_funcionario
+ORDER BY departamento, nome; -- ordena primeiro a partir da coluna 'departamento'
+```
+
+## Ordenação a partir da ordem numérica da coluna
+
+```SQL 
+SELECT * FROM tb_funcionário
+ORDER BY 3;
+/*
+Como foram selecionadas todas as colunas (*), ele retornará a 3ª coluna.
+Caso fossem informadas colunas (depois do SELECT), cada coluna informada assume uma ordem
+*/
+```
+
+## Ordenação pela posição dos campos, RIGHT ou LEFT
+
+```SQL
+SELECT nome, cpf FROM tb_funcionario
+ORDER BY LEFT(cpf, 4) -- ordena a partir dos 4 primeiros caracteres (LEFT - a partir da esquerda)
 ```
 
 [Página Inicial](../README.md)
