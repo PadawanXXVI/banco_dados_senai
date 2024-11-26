@@ -215,4 +215,3 @@ SELECT AVG(salario) FROM tb_candidato;
 
 -- USO DO AS: RENOMEIA A COLUNA DE RETORNO
 SELECT AVG(salario) AS `Média Salarial` FROM tb_candidato;
-
