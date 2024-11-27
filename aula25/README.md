@@ -154,4 +154,5 @@ INSERT INTO tb_participacao
 VALUES
     (3, 1, 1, '2024-05-05', '2024-06-05');
 ```
+
 [Página Inicial](../aula25/)
