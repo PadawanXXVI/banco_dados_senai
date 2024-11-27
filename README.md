@@ -37,7 +37,7 @@ Período de realização de 01/10/24 a 12/12/24
 | Aula 22* | 21.11.24 | Group By, Having e Order By | [Aula22](aula22/) |
 | Aula 23* | 22.11.24 | III Revisão | [Aula23](aula23/) |
 | Aula 24* | 25.11.24 | 3ª Avaliação (I prova SQL) | [Aula24](aula24/) |
-| Aula 25* | 26.11.24 | | [Aula25](aula25/) |
+| Aula 25* | 26.11.24 | Relacionamento entre tabelas | [Aula25](aula25/) |
 
 ## Miscelânea
 
