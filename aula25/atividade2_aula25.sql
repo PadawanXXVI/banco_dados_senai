@@ -77,5 +77,57 @@ SELECT * FROM tb_livro;
 
 -- ALIMENTANDO A TABELA LIVRO COM A FK CATEGORIA
 UPDATE tb_livro
+SET id_categoria = '1'
+WHERE id_livro = '1';
+
+UPDATE tb_livro
 SET id_categoria = '2'
 WHERE id_livro IN ('3','5');
+
+UPDATE tb_livro
+SET id_categoria = '3'
+WHERE id_livro = '4';
+
+
+-- INSERINDO AS COLUNAS QUE RECEBEM AS FK NA TABELA EMPRÉSTIMO
+ALTER TABLE tb_emprestimo
+ADD COLUMN id_livro INT AFTER id_emprestimo;
+DESC tb_emprestimo;
+
+ALTER TABLE tb_emprestimo
+ADD COLUMN id_usuario INT AFTER id_emprestimo
+DESC tb_emprestimo;
+
+-- INSERINDO AS CHAVES ESTRANGEIRAS NA TABELA EMPRÉSTIMO
+ALTER TABLE tb_emprestimo
+ADD FOREIGN KEY (id_usuario) REFERENCES tb_usuario (id_usuario)
+ADD FOREIGN KEY (id_livro) REFERENCES tb_livro (id_livro);
+
+
+-- ALIMENTANDO A TAVBELA EMPRÉSTIMO COM AS FK
+
+-- FK USUÁRIO
+UPDATE tb_emprestimo
+SET id_usuario = '1'
+WHERE id_emprestimo IN ('1','5');
+
+UPDATE tb_emprestimo
+SET id_usuario = '2'
+WHERE id_emprestimo IN ('3','4');
+
+UPDATE tb_emprestimo
+SET id_usuario = '5'
+WHERE id_emprestimo = '2';
+
+-- FK LIVRO
+UPDATE tb_emprestimo
+SET id_livro = '1'
+WHERE id_usuario IN ('1','3','5');
+
+UPDATE tb_emprestimo
+SET id_livro = '2'
+WHERE id_usuario = '4';
+
+UPDATE yb_emprestimo
+SET id_livro = '4'
+WHERE id_usuario = '2';
