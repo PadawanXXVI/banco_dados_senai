@@ -95,12 +95,12 @@ ADD COLUMN id_livro INT AFTER id_emprestimo;
 DESC tb_emprestimo;
 
 ALTER TABLE tb_emprestimo
-ADD COLUMN id_usuario INT AFTER id_emprestimo
+ADD COLUMN id_usuario INT AFTER id_emprestimo;
 DESC tb_emprestimo;
 
 -- INSERINDO AS CHAVES ESTRANGEIRAS NA TABELA EMPRÉSTIMO
 ALTER TABLE tb_emprestimo
-ADD FOREIGN KEY (id_usuario) REFERENCES tb_usuario (id_usuario)
+ADD FOREIGN KEY (id_usuario) REFERENCES tb_usuario (id_usuario),
 ADD FOREIGN KEY (id_livro) REFERENCES tb_livro (id_livro);
 
 
@@ -115,8 +115,10 @@ UPDATE tb_emprestimo
 SET id_usuario = '2'
 WHERE id_emprestimo IN ('3','4');
 
+SELECT * FROM tb_emprestimo;
+
 UPDATE tb_emprestimo
-SET id_usuario = '5'
+SET id_usuario = '3'
 WHERE id_emprestimo = '2';
 
 -- FK LIVRO
@@ -128,6 +130,6 @@ UPDATE tb_emprestimo
 SET id_livro = '2'
 WHERE id_usuario = '4';
 
-UPDATE yb_emprestimo
+UPDATE tb_emprestimo
 SET id_livro = '4'
 WHERE id_usuario = '2';
