@@ -135,3 +135,13 @@ INNER JOIN tb_vendedor AS v ON v.id_vendedor = p.id_vendedor;
 SELECT v.nome, SUM(p.valor) AS `Total vendido` FROM tb_pedido AS p
 INNER JOIN tb_vendedor AS v ON v.id_vendedor = p.id_vendedor
 GROUP BY v.nome;
+
+-- AGRUPE OS PEDIDFOS POR VENDEDOR SOMANDO OS VALORES DA VENDA e INFORMANDO OS PRODUTOS
+SELECT v.nome, SUM(p.valor) AS `Total vendido`, GROUP_CONCAT(p.produto SEPARATOR ' / ') AS `Produtos Vendidos` FROM tb_pedido AS p
+INNER JOIN tb_vendedor AS v ON v.id_vendedor = p.id_vendedor
+GROUP BY v.nome;
+
+-- TRAZER OS PEDIDOS DO CIENTE CARLOS
+SELECT c.nome, p.produto FROM tb_cliente AS c
+INNER JOIN tb_pedido AS p ON c.id_cliente = p.id_cliente
+WHERE c.nome = 'Carlos';
