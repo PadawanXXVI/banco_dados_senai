@@ -9,7 +9,7 @@ A partir da ficha abaixo, crie os modelos conceitual e lógico e, em seguida, cr
 ## Criando e selecionando o banco de dados para uso
 
 ```SQL
-CREATE IF NOT EXISTS db_firma02;
+CREATE DATABASE IF NOT EXISTS db_firma02;
 USE db_firma02;
 ```
 
