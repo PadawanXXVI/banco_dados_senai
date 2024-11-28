@@ -32,14 +32,14 @@ Período de realização de 01/10/24 a 12/12/24
 | Aula 17* | 12.11.24 | Comandos UPDATE, DELETE e TRUNCATE - Aula 03 SQL| [Aula17](aula17/) |
 | Aula 18* | 13.11.24 | Operadores Lógicos e Relacionais - Aula 04 SQL | [Aula18](aula18/) |
 | Aula 19* | 14.11.24 | I Revisão | [Aula19](aula19/) |
-| Aula 20* | 18.11.24 | DISTINCT e Funções de Agregação (COUNT, SUM, AVG, MIN e MAX) | [Aula20](aula20/) |
+| Aula 20* | 18.11.24 | DISTINCT e Funções de Agregação (COUNT, SUM, AVG, MIN e MAX) - Aula 05 SQL | [Aula20](aula20/) |
 | Aula 21* | 19.11.24 | II Revisão | [Aula21](aula21/) |
-| Aula 22* | 21.11.24 | Group By, Having e Order By | [Aula22](aula22/) |
+| Aula 22* | 21.11.24 | Group By, Having e Order By - Aula 06 SQL | [Aula22](aula22/) |
 | Aula 23* | 22.11.24 | III Revisão | [Aula23](aula23/) |
 | Aula 24* | 25.11.24 | 3ª Avaliação (I prova SQL) | [Aula24](aula24/) |
-| Aula 25* | 26.11.24 | Relacionamento entre tabelas | [Aula25](aula25/) |
+| Aula 25* | 26.11.24 | Relacionamento entre tabelas - Aula 07 SQL | [Aula25](aula25/) |
 | Aula 26* | 27.11.24 | Atividade de fixação de relacionamento entre tabelas | [Aula26](aula26/) |
-| Aula 27* | 28.11.24 | | [Aula27](aula27/) |
+| Aula 27* | 28.11.24 | INNER JOIN - Aula 08 SQL| [Aula27](aula27/) |
 
 ## Miscelânea
 
