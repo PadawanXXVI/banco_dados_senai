@@ -1,5 +1,9 @@
 # RELAÇÃO ENTRE TABELAS
 
+## TABELAS QUE SERÃO UTILIZADAS DE EXEMPLO
+
+![Tabelas](tabelas_aula25.png)
+
 ## CRIAÇÃO DO BANCO DE DADOS
 
 ```SQL
