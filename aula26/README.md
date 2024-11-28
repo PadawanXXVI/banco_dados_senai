@@ -75,5 +75,14 @@ CREATE TABLE IF NOT EXISTS tb_dependente(
     FOREIGN KEY (id_func) REFERENCES tb_funcionario (id_funcionario)
 );
 ```
+## Exibindo as estruturas das tabelas criadas
+
+```SQL
+DESC tb_cargo;
+DESC tb_endereco;
+DESC tb_tel_func;
+DESC tb_func;
+DESC tb_dependente;
+```
 
 [Página Inicial](../README.md)
