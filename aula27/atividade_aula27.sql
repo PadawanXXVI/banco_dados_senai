@@ -66,7 +66,7 @@ SELECT * FROM tb_produto;
 -- Inserindo dados na tabela tb_venda
 INSERT INTO tb_venda (id_venda, data_venda, quantidade, id_cliente, id_produto)
 VALUES
-(1, '2024-01-10', 1, 1, 1),
+(1, '2024-01-10', 10, 1, 1),
 (2, '2024-01-15', 2, 2, 3),
 (3, '2024-01-20', 1, 3, 2),
 (4, '2024-01-25', 3, 4, 4),
@@ -129,7 +129,7 @@ WHERE v.quantidade > '5';
 SELECT p.nome, c.nome FROM tb_produto AS p
 INNER JOIN tb_venda AS v ON v.id_produto = p.id_produto
 INNER JOIN tb_cliente AS c ON c.id_cliente = v.id_cliente
-WHERE data_venda BETWEEN '2023-01-01' AND '2023-12-31';
+WHERE YEAR (v.data_venda) = 2023;
 
 -- Questão 11: Exibir todos os produtos vendidos e a quantidade total de cada produto vendido.
 SELECT p.nome, SUM(v.quantidade) AS `Quantidade Total` FROM tb_venda AS v
@@ -149,15 +149,16 @@ INNER JOIN tb_produto AS p ON p.id_produto = v.id_produto
 WHERE p.categoria = 'Eletrônicos';
 
 -- Questão 14: Exibir todos os clientes e os produtos comprados, mostrando também o valor total das compras (quantidade * preço).
-SELECT c.nome, p.nome, v.quantidade, (v.quantidade * p.preco) AS `Total das Compras` FROM tb_venda AS v
+SELECT c.nome, GROUP_CONCAT(p.nome), (v.quantidade * p.preco) AS `Total das Compras` FROM tb_venda AS v
 INNER JOIN tb_cliente AS c ON v.id_cliente = c.id_cliente
-INNER JOIN tb_produto AS p ON v.id_produto = p.id_produto;
+INNER JOIN tb_produto AS p ON v.id_produto = p.id_produto
+GROUP BY c.nome;
 
 -- Questão 15: Exibir o nome do cliente, o nome do produto e a data da venda, considerando apenas as vendas que ocorreram em Janeiro de 2023.
 SELECT c.nome, p.nome, v.data_venda FROM tb_cliente as c
 INNER JOIN tb_venda AS v ON c.id_cliente = v.id_cliente
 INNER JOIN tb_produto AS p ON p.id_produto = v.id_produto
-WHERE data_venda BETWEEN '2023-01-01' AND '2023-01-31';
+WHERE v.data_venda BETWEEN '2023-01-01' AND '2023-01-31';
 
 -- Questão 16: Exibir o nome do cliente e os produtos que ele comprou, considerando apenas os clientes que compraram mais de 3 produtos.
 SELECT c.nome, p.nome, COUNT(v.id_produto) FROM tb_cliente AS c
@@ -166,6 +167,9 @@ INNER JOIN tb_produto AS p ON p.id_produto = v.id_produto
 GROUP BY c.nome, p.nome
 HAVING COUNT(v.id_produto) > '3';
 
+select * from tb_venda
+order by id_produto;
+
 -- Questão 17: Exibir todos os clientes que compraram produtos da categoria "Roupas".
 SELECT c.nome FROM tb_cliente AS c
 INNER JOIN tb_venda AS v ON c.id_cliente = v.id_cliente
@@ -173,7 +177,7 @@ INNER JOIN  tb_produto AS p ON p.id_produto = v.id_produto
 WHERE p.categoria = 'Roupas';
 
 -- Questão 18: Exibir a data da venda, o nome do cliente e o nome do produto comprado, ordenado pela data da venda.
-SELECT v.data_venda, c.nome, p.nome FROM tb_venda AS v
+SELECT v.data_venda, c.nome, p.nome AS Produto FROM tb_venda AS v
 INNER JOIN tb_cliente AS c ON v.id_cliente = c.id_cliente
 INNER JOIN tb_produto AS p ON p.id_produto = v.id_produto
 ORDER BY v.data_venda;
