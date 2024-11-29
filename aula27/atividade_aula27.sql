@@ -115,18 +115,67 @@ SELECT p.nome, v.quantidade, p.preco AS `Preço Unitário` FROM tb_produto AS p
 INNER JOIN tb_venda as V ON p.id_produto = v.id_produto;
 
 -- Questão 9: Exibir os clientes que compraram mais de 5 unidades de algum produto.
-SELECT c.nome, p.nome FROM tb_cliente AS c
+SELECT c.nome, p.nome, v.quantidade FROM tb_cliente AS c
 INNER JOIN tb_venda AS v ON v.id_cliente = c.id_cliente
-
+INNER JOIN tb_produto AS p ON p.id_produto = v.id_produto
+WHERE v.quantidade > '5';
 
 -- Questão 10: Exibir os produtos vendidos com o nome do cliente que comprou, considerando apenas vendas feitas em 2023.
+SELECT p.nome, c.nome FROM tb_produto AS p
+INNER JOIN tb_venda AS v ON v.id_produto = p.id_produto
+INNER JOIN tb_cliente AS c ON c.id_cliente = v.id_cliente
+WHERE data_venda BETWEEN '2023-01-01' AND '2023-12-31';
+
 -- Questão 11: Exibir todos os produtos vendidos e a quantidade total de cada produto vendido.
+SELECT p.nome, v.quantidade FROM tb_venda AS v
+INNER JOIN tb_produto AS p ON p.id_produto = v.id_produto;
+
 -- Questão 12: Exibir todos os clientes e a soma total das compras de cada um (quantidade * preço do produto).
+SELECT c.nome, p.nome, SUM(v.quantidade * p.preco) FROM tb_cliente AS c
+INNER JOIN tb_venda AS v ON c.id_cliente = v.id_cliente
+INNER JOIN tb_produto AS p ON p.id_produto = v.id_produto
+GROUP BY p.nome;
+
 -- Questão 13: Exibir o nome do cliente e o nome do produto comprado, considerando apenas clientes que compraram produtos da categoria "Eletrônicos".
+SELECT c.nome, p.nome, p.categoria FROM tb_cliente AS c
+INNER JOIN tb_venda AS v ON c.id_cliente = v.id_cliente
+INNER JOIN tb_produto AS p ON p.id_produto = v.id_produto
+WHERE p.categoria = 'Eletrônicos';
+
 -- Questão 14: Exibir todos os clientes e os produtos comprados, mostrando também o valor total das compras (quantidade * preço).
+
 -- Questão 15: Exibir o nome do cliente, o nome do produto e a data da venda, considerando apenas as vendas que ocorreram em Janeiro de 2023.
+SELECT c.nome, p.nome, v.data_venda FROM tb_cliente as c
+INNER JOIN tb_venda AS v ON c.id_cliente = v.id_cliente
+INNER JOIN tb_produto AS p ON p.id_produto = v.id_produto
+WHERE data_venda BETWEEN '2023-01-01' AND '2023-01-31';
+
 -- Questão 16: Exibir o nome do cliente e os produtos que ele comprou, considerando apenas os clientes que compraram mais de 3 produtos.
+SELECT c.nome, p.nome, v.quantidade FROM tb_cliente AS c
+INNER JOIN tb_venda AS v ON c.id_cliente = v.id_cliente
+INNER JOIN tb_produto AS p ON p.id_produto = v.id_produto
+WHERE v.quantidade > 3;
+
 -- Questão 17: Exibir todos os clientes que compraram produtos da categoria "Roupas".
+SELECT c.nome, p.nome, p.categoria FROM tb_cliente AS c
+INNER JOIN tb_venda AS v ON c.id_cliente = v.id_cliente
+INNER JOIN  tb_produto AS p ON p.id_produto = v.id_produto
+WHERE p.categoria = 'Roupas';
+
 -- Questão 18: Exibir a data da venda, o nome do cliente e o nome do produto comprado, ordenado pela data da venda.
+SELECT v.data_venda, c.nome, p.nome FROM tb_venda AS v
+INNER JOIN tb_cliente AS c ON v.id_cliente = c.id_cliente
+INNER JOIN tb_produto AS p ON p.id_produto = v.id_produto
+ORDER BY v.data_venda;
+
 -- Questão 19: Exibir o nome do cliente, o nome do produto e o preço do produto para todas as vendas realizadas em 2023.
+SELECT c.nome, p.nome, p.preco FROM tb_cliente AS c
+INNER JOIN  tb_venda AS v ON c.id_cliente = v.id_cliente
+INNER JOIN tb_produto AS p ON p.id_produto = v.id_produto
+WHERE data_venda BETWEEN '2023-01-01' AND '2023-12-31';
+
 -- Questão 20: Exibir o nome do cliente e a quantidade total comprada de cada produto.
+SELECT c.nome, p.nome, v.quantidade FROM tb_cliente AS c
+INNER JOIN tb_venda AS v ON c.id_cliente = v.id_cliente
+INNER JOIN tb_produto AS p ON p.id_produto = v.id_produto
+GROUP BY p.nome;
