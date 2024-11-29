@@ -39,7 +39,7 @@ Período de realização de 01/10/24 a 12/12/24
 | Aula 24* | 25.11.24 | 3ª Avaliação (I prova SQL) | [Aula24](aula24/) |
 | Aula 25* | 26.11.24 | Relacionamento entre tabelas - Aula 07 SQL | [Aula25](aula25/) |
 | Aula 26* | 27.11.24 | Atividade de fixação de relacionamento entre tabelas | [Aula26](aula26/) |
-| Aula 27* | 28.11.24 | INNER JOIN, LEFT JOIN e RIGHT JOIN - Aula 08 SQL| [Aula27](aula27/) |
+| Aula 27* | 28.11.24 | INNER JOIN - Aula 08 SQL| [Aula27](aula27/) |
 
 ## Miscelânea
 
