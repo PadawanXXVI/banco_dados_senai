@@ -46,6 +46,8 @@ INSERT INTO tb_cliente (id_cliente, nome, cidade, telefone) VALUES
 (9, 'Rafael Pereira', 'Recife', '51911111111'),
 (10, 'Clara Martins', 'Recife', '81900000000');
 
+SELECT * FROM tb_cliente;
+
 -- Inserindo dados na tabela tb_produto
 INSERT INTO tb_produto (id_produto, nome, categoria, preco) VALUES
 (1, 'Notebook', 'Eletrônicos', 3500.00),
@@ -58,6 +60,8 @@ INSERT INTO tb_produto (id_produto, nome, categoria, preco) VALUES
 (8, 'Fone de Ouvido', 'Acessórios', 150.00),
 (9, 'Câmera Fotográfica', 'Eletrônicos', 3000.00),
 (10, 'Impressora', 'Eletrônicos', 900.00);
+
+SELECT * FROM tb_produto;
 
 -- Inserindo dados na tabela tb_venda
 INSERT INTO tb_venda (id_venda, data_venda, quantidade, id_cliente, id_produto)
@@ -72,6 +76,8 @@ VALUES
 (8, '2024-02-15', 1, 8, 9),
 (9, '2024-02-20', 2, 9, 7),
 (10, '2024-02-25', 1, 10, 10);
+
+SELECT * FROM tb_venda;
 
 -- Questão 1: Exibir o nome do cliente e a data da venda.
 SELECT c.nome, v.data_venda FROM tb_cliente AS c
