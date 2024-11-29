@@ -1,8 +1,8 @@
-# INNER JOIN, LEFT JOIN E RIGHT JOIN
+# INNER JOIN
 
 JOIN: junção  
-INNER: interna  
-LEFT: a partir da tabela da esquerda  
-RIGHT: a partir da tabela da direita
+INNER: interna
+
+
 
 [Página Inicial](../README.md)
