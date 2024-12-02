@@ -95,4 +95,4 @@ ORDER BY c.nome;
 SELECT c.nome, SUM(v.valor) AS `Total de vendas por cliente`, v.data_venda FROM tb_cliente AS c
 INNER JOIN tb_venda AS v ON c.id_cliente = v.id_cliente
 GROUP BY c.nome
-HAVING monthname(v.data_venda) = 'novembro' AND SUM(v.valor) > '1500';
+HAVING YEAR(v.data_venda) = '2024' AND SUM(v.valor) > '1500';
