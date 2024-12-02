@@ -65,7 +65,13 @@ INSERT INTO tb_cliente (nome, cidade, telefone) VALUES
 ('Lucas Almeida', 'Brasília', '92933333333'),
 ('Juliana Costa', 'Belo Horizonte', '31922222222'),
 ('Rafael Pereira', 'Recife', '51911111111'),
-('Clara Martins', 'Recife', '81900000000')
+('Clara Martins', 'Recife', '81900000000');
+```
+
+## Visaulização dos clientes cadastrados
+
+```SQL
+SELECT * FROM tb_cliente;
 ```
 
 [Página Inicial](../README.md)
