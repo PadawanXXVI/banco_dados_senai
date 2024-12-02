@@ -84,8 +84,8 @@ INSERT INTO tb_produto (nome, categoria, preco) VALUES
 ```
 
 ### Questão 1: Exibir o nome do cliente e a data da venda.
-### Questão 3: Exibir a data da venda, o nome do cliente e o nome do produto.
 ### Questão 2: Exibir o nome do cliente e o nome do produto vendido.
+### Questão 3: Exibir a data da venda, o nome do cliente e o nome do produto.
 ### Questão 4: Exibir todos os produtos vendidos e o nome do cliente que comprou cada produto.
 ### Questão 5: Exibir o nome do cliente, o nome do produto e a quantidade comprada.
 ### Questão 6: Exibir todos os clientes e os produtos comprados por eles com a quantidade maior que 2.
