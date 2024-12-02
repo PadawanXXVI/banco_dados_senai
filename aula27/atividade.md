@@ -74,4 +74,13 @@ INSERT INTO tb_cliente (nome, cidade, telefone) VALUES
 SELECT * FROM tb_cliente;
 ```
 
+## Cadastro de produtos
+
+```SQL
+INSERT INTO tb_produto (nome, categoria, preco) VALUES
+('Notebook', 'Eletrônicos', '3500.00'),
+('Smartphone', 'Eletrônicos', '2500.00'),
+('', '', ''),
+```
+
 [Página Inicial](../README.md)
