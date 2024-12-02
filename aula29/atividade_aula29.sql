@@ -97,5 +97,8 @@ INNER JOIN tb_venda AS v ON c.id_cliente = v.id_cliente
 GROUP BY c.nome
 HAVING YEAR(v.data_venda) = '2024' AND SUM(v.valor) > '1500';
 
-SELECT * FROM tb_cliente;
-where YEAR(data_venda) = '2024'; 
+SELECT c.nome, SUM(v.valor) AS `Total de vendas por cliente`, GROUP_CONCAT(date_format(v.data_venda, '%M %Y')) FROM tb_cliente AS c
+INNER JOIN tb_venda AS v ON c.id_cliente = v.id_cliente
+WHERE YEAR(data_venda)=2024
+GROUP BY c.nome
+HAVING  SUM(v.valor) > '1500';
