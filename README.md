@@ -41,7 +41,7 @@ Período de realização de 01/10/24 a 12/12/24
 | Aula 26* | 27.11.24 | Atividade de fixação de relacionamento entre tabelas | [Aula26](aula26/) |
 | Aula 27* | 28.11.24 | INNER JOIN - Aula 08 SQL| [Aula27](aula27/) |
 | Aula 28* | 29.11.24 | Correção de atividades da aula 26 e aula 27 | [Aula28](aula28/) |
-| Aula 29* | 02.12.24 |  | [Aula29](aula29/)|
+| Aula 29* | 02.12.24 | Funções de data - Aula 09 SQL | [Aula29](aula29/)|
 
 ## Miscelânea
 
