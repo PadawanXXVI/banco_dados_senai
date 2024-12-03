@@ -70,10 +70,10 @@ SELECT v.produto, c.nome FROM tb_cliente AS c
 RIGHT JOIN tb_venda AS v ON v.id_cliente = c.id_cliente;
 
 -- 5. Listar todas as vendas realizadas em novembro de 2024 realizadas depois das 16h e quem comprou.
-SELECT v.produto, c.nome, date_format(data_venda, '%M - %H:%i:%s') AS `Data venda` FROM tb_venda AS v
+SELECT c.nome, v.id_venda, v.data_venda FROM tb_venda AS v
 INNER JOIN tb_cliente AS c ON v.id_cliente = c.id_cliente
-WHERE MONTHNAME(v.data_venda) = 'novembro' AND TIME(data_venda) > '16:00:00';
-
+WHERE MONTHNAME(v.data_venda) = 'november' AND TIME(v.data_venda) > '16:00';
+select * from tb_venda;
 -- 6. Exibir os clientes que possuem o nome "Silva" e que tenha gastado mais de 1000 reais.
 SELECT c.nome, v.valor FROM tb_cliente AS c
 INNER JOIN tb_venda AS v ON c.id_cliente = v.id_cliente
@@ -99,6 +99,6 @@ HAVING YEAR(v.data_venda) = '2024' AND SUM(v.valor) > '1500';
 
 SELECT c.nome, SUM(v.valor) AS `Total de vendas por cliente`, GROUP_CONCAT(date_format(v.data_venda, ' %d de %M de %Y')) AS `Data da venda` FROM tb_cliente AS c
 INNER JOIN tb_venda AS v ON c.id_cliente = v.id_cliente
-WHERE YEAR(data_venda)= '2024'
+WHERE YEAR(v.data_venda)= '2024'
 GROUP BY c.nome
 HAVING  SUM(v.valor) > '1500';
