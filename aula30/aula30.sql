@@ -124,3 +124,35 @@ SELECT nome, CONCAT('Você tem ', timestampdiff(YEAR, data_nascimento, current_d
 GROUP BY idade;
 
 SELECT * FROM vw_idade;
+
+-- CRIAÇÃO DA TABELA USUÁRIO
+CREATE TABLE tb_usuario (
+    usuario_id INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(100),
+    sobrenome VARCHAR(100),
+    data_nascimento DATE,
+    email VARCHAR(100),
+    salario DECIMAL(10, 2),
+    hora_entrada TIME
+);
+
+/*
+FORMATAÇÃO DE MOEDAS
+*/ 
+-- CADASTRO DE USUÁRIOS
+INSERT INTO tb_usuario (nome, sobrenome, data_nascimento, email, salario, hora_entrada)
+VALUES
+('João', 'Silva', '1990-03-15', 'joao.silva@example.com', 2500.50, '08:30:00'),
+('Maria', 'Oliveira', '1985-07-22', 'maria.oliveira@example.com', 3200.75, '09:00:00'),
+('Pedro', 'Souza', '2000-01-10', 'pedro.souza@example.com', 1800.30, '08:45:00'),
+('Ana', 'Costa', '1995-11-05', 'ana.costa@example.com', 2900.10, '07:55:00');
+
+-- MÉDIA DE SALÁRIOS
+SELECT CONCAT('R$ ', FORMAT(AVG(salario),2,'de_DE')) AS `Média Salarial` FROM tb_usuario; -- ,2 informa as casas decimais e de_DE para formatar o ponto para milhar e vírgula para casas decimais.
+
+/*
+FORMATAÇÃO DE TEXTOS
+*/
+
+-- UPPER / LOWER
+SELECT UPPER(nome) FROM tb_usuario;
