@@ -1,3 +1,22 @@
+/*
+    AULA 11 - CASE...WHEN
+
+É uma estrutura condicional usada para verificar condições
+e retornar valores diferentes.
+
+Serve para realizar condições e exibir resultados com base
+em valores nas colunas
+*/
+
+# ESTRUTURA
+SELECT coluna1, coluna2
+    CASE
+        WHEN condicao_1 THEN valor_1
+        WHEN condicao_2 THEN valor_2
+        WHEN condicao_3 THEN valor_3
+        ELSE valor_4
+    END AS nome_nova_coluna
+FROM tabela;
 create database db_case;
 use db_case;
 drop table tb_usuario;
@@ -33,3 +52,36 @@ VALUES
 ('Daniel Pereira', '1950-05-07', NULL, '61811110000', NULL, '2013-12-20', 'ativo'),
 ('Luana Farias', '2002-12-25', 'luana.farias@gmail.com', NULL, 'Rua S, 457, Vicente Pires-DF', '2021-11-15', 'ativo'),
 ('Pedro Gomes', '1989-09-14', 'pedro.gomes@gmail.com', '61899997777', NULL, '2023-10-22', 'inativo');
+SELECT * FROM tb_usuario;
+# exemplo 01
+SELECT * FROM vw_situacao;
+
+SELECT nome,situacao,
+    CASE
+        WHEN situacao ='ativo' THEN 'Usuário ativo'
+        WHEN situacao ='inativo' THEN 'Usuário está inativo'
+        WHEN situacao ='suspenso' THEN 'Usuário está Suspenso'
+        ELSE 'Status desconhecido'
+    END AS situacao
+FROM tb_usuario;
+
+# exemplo 2
+SELECT nome, data_nascimento, timestampdiff(year,data_nascimento,curdate()) as idade,
+    CASE
+        WHEN timestampdiff(year,data_nascimento,curdate()) < 18 THEN 'Jovem'
+        WHEN timestampdiff(year,data_nascimento,curdate()) BETWEEN 18 AND 59 THEN 'Adulto'
+        ELSE 'Idoso'
+    END AS categoria_idade
+FROM tb_usuario;
+
+# exemplo 3.
+-- Se o funcionário tiver menos de 1 ano de experiência retorne 'Recente'
+-- Entre 1 e 4 anos é um funcionário 'Experiente'
+-- Maior que 4 anos é um 'Vetereno'
+SELECT nome, data_cadastro, timestampdiff(year,data_cadastro,curdate()) as'Anos Serviço',
+    CASE
+        WHEN timestampdiff(year,data_cadastro,curdate()) < 1 THEN 'Recente'
+        WHEN timestampdiff(year,data_cadastro,curdate()) BETWEEN 1 AND 4 THEN 'Experiente'
+        ELSE 'Vetereno(a)'
+    END AS 'Categoria Tempo Empresa'
+FROM tb_usuario;
