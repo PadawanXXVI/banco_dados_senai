@@ -43,6 +43,7 @@ Período de realização de 01/10/24 a 12/12/24
 | Aula 28* | 29.11.24 | Correção de atividades da aula 26 e aula 27 | [Aula28](aula28/) |
 | Aula 29* | 02.12.24 | Funções de data - Aula 09 SQL | [Aula29](aula29/)|
 | Aula 30* | 03.12.24 | View: Visão/Exibição e Formatação de Moedas e Textos - Aula 10 SQL | [Aula30](aula30/) |
+| Aula 31* | 04.12.24 | | [Aula31](aula31/) |
 
 ## Miscelânea
 
