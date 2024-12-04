@@ -89,11 +89,51 @@ INNER JOIN tb_pedido AS p ON c.id_cliente = p.id_cliente
 WHERE p.data_pedido >= curdate() - INTERVAL 1 MONTH;
 
 # 11. Liste somente o cliente mais velho.
+SELECT nome, CONCAT(timestampdiff(YEAR, data_nascimento, current_date),' anos') AS Idade FROM tb_cliente
+ORDER BY idade DESC
+LIMIT 1;
+
 # 12. Exiba todos os emails dos clientes em letras maiusculas.
+SELECT nome, UPPER(email) AS `E-mail` FROM tb_cliente
+ORDER BY nome;
+
 # 13. Liste o valor médio dos pedidos.
+SELECT c.nome, CONCAT('R$ ', FORMAT(AVG(p.valor), 2, 'de_DE')) AS `Valor Médio` FROM tb_cliente AS c
+INNER JOIN tb_pedido AS p ON c.id_cliente = p.id_cliente
+GROUP BY nome;
+
 # 14. Exiba todos os pedidos agrupados por status e a quantidade de cada um.
+SELECT status_pedido, COUNT(*) AS quantidade FROM tb_pedido
+GROUP BY status_pedido;
+
 # 15. Qual é o total de pedidos pendentes?
+SELECT STATUS_PEDIDO, count(*) AS quantidade FROM tb_pedido
+GROUP BY status_pedido
+HAVING status_pedido = 'pendente';
+
 # 16. Mostre o número de clientes por cidade.
+SELECT cidade, COUNT(*) AS `Total Clientes` FROM tb_cliente
+GROUP BY cidade;
+
+SET lc_time_names = 'pt_BR';
 # 17. Liste os pedidos realizados por clientes do Gama.
+SELECT c.nome, c.cidade, COUNT(p.id_pedido) AS `Total de pedidos`, GROUP_CONCAT(MONTHNAME(p.data_pedido)) AS `Mês da compra` FROM tb_cliente AS c
+INNER JOIN tb_pedido AS p ON c.id_cliente = p.id_cliente
+WHERE c.cidade = 'gama'
+GROUP BY c.nome;
+
 # 18. Crie uma VIEW para exibir clientes com o valor total de pedidos
+CREATE VIEW vw_total_pedidos AS
+SELECT c.nome, CONCAT('R$ ', FORMAT(SUM(p.valor), 2, 'de_DE')) AS `Valor total dos pedidos` FROM tb_cliente AS c
+INNER JOIN tb_pedido AS p ON c.id_cliente = p.id_cliente
+GROUP BY c.nome;
+SELECT * FROM vw_total_pedidos;
+
 # 19. Criar uma VIEW para exibir clientes e seus pedidos finalizados com valor acima de 500
+CREATE VIEW vw_finalizadas AS
+SELECT c.nome, CONCAT('R$ ', FORMAT(SUM(p.valor), 2, 'de_DE')) AS `Total compras finalizadas`, p.status_pedido FROM tb_cliente AS c
+INNER JOIN tb_pedido AS p ON c.id_cliente = p.id_cliente
+WHERE p.status_pedido = 'finalizado'
+GROUP BY c.nome
+ORDER BY c.nome;
+SELECT * FROM vw_finalizadas;
