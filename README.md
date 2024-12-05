@@ -44,6 +44,7 @@ Período de realização de 01/10/24 a 12/12/24
 | Aula 29* | 02.12.24 | Funções de data - Aula 09 SQL | [Aula29](aula29/)|
 | Aula 30* | 03.12.24 | View: Visão/Exibição e Formatação de Moedas e Textos - Aula 10 SQL | [Aula30](aula30/) |
 | Aula 31* | 04.12.24 | CASE ... WHEN - Aula 11 SQL | [Aula31](aula31/) |
+| Aula 32* | 05.12.24 | FUNCTION (funções) - Aula 12 SQL| [Aula32](aula32/) |
 
 ## Miscelânea
 
