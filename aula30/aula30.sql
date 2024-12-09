@@ -1,11 +1,11 @@
 /*
-Aula 10 - VIEW - VISÃO/EXIBIÇÃOPTIMIZE
+Aula 10 - VIEW - VISÃO/EXIBIÇÃO
 É uma tabela virtual baseada no resultado de uma consulta SQL.
 Sempre mostra os dados atualizados!
 Permite simplificar consultas que são feitas diariamente.
 */
 
--- COMANDOR PARA CRIAR UMA VIEW
+-- COMANDO PARA CRIAR UMA VIEW
 CREATE VIEW nome_da_view AS 
 SELECT coluna1, coluna2 FROM tabela
 WHERE condição;
