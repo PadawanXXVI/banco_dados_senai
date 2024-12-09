@@ -115,7 +115,7 @@ CREATE VIEW vw_cliente AS SELECT * FROM vw_clientes_ativos; -- criou a cópia
 DROP VIEW vw_idade;
 
 -- VISUALIZAR A NOVA VIEW
-SELECT * FROM vw_cliente; -- aqui não é possível visualizar, porque a view de oriogem foi excluída
+SELECT * FROM vw_cliente; -- aqui não é possível visualizar, porque a view de origem foi excluída
 
 SHOW CREATE VIEW vw_cliente;
 
