@@ -34,7 +34,7 @@ CREATE TABLE tb_funcionarios (
 
 -- Tabela de Endereço dos Funcionários 03/10
 CREATE TABLE tb_endereco_funcionario (
-    id_funcionario INT,
+    id_end_funcionario INT PRIMARY KEY AUTO_INCREMENT,
     logradouro VARCHAR(255),
     numero INT,
     complemento VARCHAR(255),
@@ -42,7 +42,7 @@ CREATE TABLE tb_endereco_funcionario (
     cidade VARCHAR(255),
     estado VARCHAR(2),
     cep VARCHAR(8),
-    PRIMARY KEY (id_funcionario),
+    id_funcionario INT,
     FOREIGN KEY (id_funcionario) REFERENCES tb_funcionarios(id_funcionario)
 );
 
@@ -65,29 +65,29 @@ CREATE TABLE tb_mesas (
 CREATE TABLE tb_fornecedores (
     id_fornecedor INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(255) NOT NULL,
-    cpf VARCHAR(20),
+    cnpj VARCHAR(20),
     telefone VARCHAR(20),
     email VARCHAR(255)
 );
 
 -- Tabela de Pedidos 07/10
 CREATE TABLE tb_pedidos (
-    id_pedido INT AUTO_INCREMENT PRIMARY KEY,
-    id_mesa INT,
-    id_funcionario INT,
+    id_pedido INT AUTO_INCREMENT PRIMARY KEY,    
     data_pedido DATETIME,
     status VARCHAR(50),
+    id_mesa INT,
+    id_funcionario INT,    
     FOREIGN KEY (id_mesa) REFERENCES tb_mesas(id_mesa),
     FOREIGN KEY (id_funcionario) REFERENCES tb_funcionarios(id_funcionario)
 );
 
 -- Tabela de Detalhes dos Pedidos 08/10
 CREATE TABLE tb_detalhes_pedidos (
-    id_pedido INT,
-    id_item INT,
+    id_detalhes_pedidos INT PRIMARY KEY AUTO_INCREMENT,
     quantidade INT,
     preco_unitario DECIMAL(10, 2),
-    PRIMARY KEY (id_pedido, id_item),
+    id_pedido INT,
+    id_item INT,    
     FOREIGN KEY (id_pedido) REFERENCES tb_pedidos(id_pedido),
     FOREIGN KEY (id_item) REFERENCES tb_menu(id_item)
 );
