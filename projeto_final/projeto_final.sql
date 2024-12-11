@@ -38,6 +38,7 @@ CREATE TABLE tb_endereco_funcionario (
     logradouro VARCHAR(255),
     numero INT,
     complemento VARCHAR(255),
+    bairro VARCHAR(225)
     cidade VARCHAR(255),
     estado VARCHAR(2),
     cep VARCHAR(8),
@@ -172,32 +173,33 @@ INSERT INTO tb_funcionarios (nome, data_nascimento, cpf, cargo, telefone, email,
 ('Fernanda Pinto', '1992-03-19', '25345678900', 'Garçom', '11900210987', 'fernanda.pinto@example.com', 2000.00, '2024-01-02');
 
 -- Registro dos endereços dos funcionários
-INSERT INTO tb_endereco_funcionario (id_funcionario, logradouro, numero, complemento, cidade, estado, cep) VALUES
-(1, 'Rua A', 123, 'Apto 1', 'São Paulo', 'SP', '12345678'),
-(2, 'Rua B', 456, 'Casa', 'Rio de Janeiro', 'RJ', '23456789'),
-(3, 'Rua C', 789, 'Cobertura', 'Belo Horizonte', 'MG', '34567890'),
-(4, 'Avenida D', 101, 'Bloco 2', 'Curitiba', 'PR', '45678901'),
-(5, 'Travessa E', 202, 'Fundos', 'Porto Alegre', 'RS', '56789012'),
-(6, 'Praça F', 303, '', 'Fortaleza', 'CE', '67890123'),
-(7, 'Alameda G', 404, 'Cobertura', 'Salvador', 'BA', '78901234'),
-(8, 'Rua H', 505, 'Apto 5', 'Florianópolis', 'SC', '89012345'),
-(9, 'Avenida I', 606, 'Casa', 'Manaus', 'AM', '90123456'),
-(10, 'Travessa J', 707, 'Bloco 1', 'Goiânia', 'GO', '01234567'),
-(11, 'Praça K', 808, 'Fundos', 'Belém', 'PA', '12345078'),
-(12, 'Alameda L', 909, '', 'Campo Grande', 'MS', '23456189'),
-(13, 'Rua M', 1010, 'Apto 10', 'São Luís', 'MA', '34567290'),
-(14, 'Avenida N', 1111, 'Bloco 3', 'Natal', 'RN', '45678301'),
-(15, 'Travessa O', 1212, 'Cobertura', 'João Pessoa', 'PB', '56789412'),
-(16, 'Praça P', 1313, 'Fundos', 'Maceió', 'AL', '67890523'),
-(17, 'Alameda Q', 1414, 'Apto 14', 'Aracaju', 'SE', '78901634'),
-(18, 'Rua R', 1515, 'Casa', 'Boa Vista', 'RR', '89012745'),
-(19, 'Avenida S', 1616, 'Bloco 2', 'Palmas', 'TO', '90123856'),
-(20, 'Travessa T', 1717, 'Fundos', 'Teresina', 'PI', '01234967'),
-(21, 'Praça U', 1818, '', 'Macapá', 'AP', '12345078'),
-(22, 'Alameda V', 1919, 'Apto 19', 'Rio Branco', 'AC', '23456189'),
-(23, 'Rua W', 2020, 'Casa', 'Vitória', 'ES', '34567290'),
-(24, 'Avenida X', 2121, 'Bloco 1', 'Porto Velho', 'RO', '45678301'),
-(25, 'Travessa Y', 2222, 'Cobertura', 'Recife', 'PE', '56789412');
+INSERT INTO tb_endereco_funcionario (id_funcionario, rua, numero, complemento, bairro, cidade, estado, cep) VALUES
+(1, 'Rua A', 123, 'Apto 1', 'Asa Norte', 'Brasília', 'DF', '70040902'),
+(2, 'Rua B', 456, 'Casa', 'Taguatinga Centro', 'Taguatinga', 'DF', '72000000'),
+(3, 'Rua C', 789, 'Cobertura', 'Aguas Claras', 'Brasília', 'DF', '71900000'),
+(4, 'Avenida D', 101, 'Bloco 2', 'Samambaia Sul', 'Brasília', 'DF', '72300000'),
+(5, 'Travessa E', 202, 'Fundos', 'Gama Oeste', 'Brasília', 'DF', '72400000'),
+(6, 'Praça F', 303, '', 'Ceilândia Norte', 'Brasília', 'DF', '72200000'),
+(7, 'Alameda G', 404, 'Cobertura', 'Riacho Fundo', 'Brasília', 'DF', '71800000'),
+(8, 'Rua H', 505, 'Apto 5', 'Planaltina Centro', 'Planaltina', 'DF', '73700000'),
+(9, 'Avenida I', 606, 'Casa', 'Recanto das Emas', 'Brasília', 'DF', '72600000'),
+(10, 'Travessa J', 707, 'Bloco 1', 'Santa Maria', 'Brasília', 'DF', '72500000'),
+(11, 'Praça K', 808, 'Fundos', 'Guará II', 'Brasília', 'DF', '71000000'),
+(12, 'Alameda L', 909, '', 'Sobradinho II', 'Brasília', 'DF', '73000000'),
+(13, 'Rua M', 1010, 'Apto 10', 'Brazlândia', 'Brasília', 'DF', '72700000'),
+(14, 'Avenida N', 1111, 'Bloco 3', 'Sudoeste', 'Brasília', 'DF', '70200000'),
+(15, 'Travessa O', 1212, 'Cobertura', 'Núcleo Bandeirante', 'Brasília', 'DF', '71700000'),
+(16, 'Praça P', 1313, 'Fundos', 'Park Way', 'Brasília', 'DF', '71720000'),
+(17, 'Alameda Q', 1414, 'Apto 14', 'Candangolândia', 'Brasília', 'DF', '71725000'),
+(18, 'Rua R', 1515, 'Casa', 'Paranoá', 'Brasília', 'DF', '71500000'),
+(19, 'Avenida S', 1616, 'Bloco 2', 'Cruzeiro Novo', 'Brasília', 'DF', '70600000'),
+(20, 'Travessa T', 1717, 'Fundos', 'Jardim Botânico', 'Brasília', 'DF', '71680000'),
+(21, 'Praça U', 1818, '', 'Águas Lindas de Goiás', 'Águas Lindas', 'GO', '72910000'),
+(22, 'Alameda V', 1919, 'Apto 19', 'Valparaíso', 'Valparaíso', 'GO', '72870000'),
+(23, 'Rua W', 2020, 'Casa', 'Cidade Ocidental', 'Cidade Ocidental', 'GO', '72880000'),
+(24, 'Avenida X', 2121, 'Bloco 1', 'Novo Gama', 'Novo Gama', 'GO', '72890000'),
+(25, 'Travessa Y', 2222, 'Cobertura', 'Santo Antônio do Descoberto', 'Santo Antônio', 'GO', '72900000');
+
 
 -- Registro dos itens do menu
 INSERT INTO tb_menu (nome, descricao, preco) VALUES
