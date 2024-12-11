@@ -8,7 +8,7 @@ do Senai SIG-DF sob orientação do Professor Yor Rio Pardo Felix
 CREATE DATABASE IF NOT EXISTS db_restaurante;
 USE db_restaurante;
 
--- Tabela de Clientes
+-- Tabela de Clientes 01/10
 CREATE TABLE tb_clientes (
     id_cliente INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(255),
@@ -19,7 +19,7 @@ CREATE TABLE tb_clientes (
     CONSTRAINT chk_cpf_cnpj CHECK (cpf IS NOT NULL OR cnpj IS NOT NULL)
 );
 
--- Tabela de Funcionários
+-- Tabela de Funcionários 02/10
 CREATE TABLE tb_funcionarios (
     id_funcionario INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(255) NOT NULL,
@@ -32,7 +32,7 @@ CREATE TABLE tb_funcionarios (
     data_contratacao DATE
 );
 
--- Tabela de Endereço dos Funcionários
+-- Tabela de Endereço dos Funcionários 03/10
 CREATE TABLE tb_endereco_funcionario (
     id_funcionario INT,
     logradouro VARCHAR(255),
@@ -45,7 +45,7 @@ CREATE TABLE tb_endereco_funcionario (
     FOREIGN KEY (id_funcionario) REFERENCES tb_funcionarios(id_funcionario)
 );
 
--- Tabela de Menu
+-- Tabela de Menu 04/10
 CREATE TABLE tb_menu (
     id_item INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(255) NOT NULL,
@@ -53,14 +53,14 @@ CREATE TABLE tb_menu (
     preco DECIMAL(10, 2)
 );
 
--- Tabela de Mesas
+-- Tabela de Mesas 05/10
 CREATE TABLE tb_mesas (
     id_mesa INT AUTO_INCREMENT PRIMARY KEY,
     capacidade INT,
     localizacao VARCHAR(255)
 );
 
--- Tabela de Fornecedores
+-- Tabela de Fornecedores 06/10
 CREATE TABLE tb_fornecedores (
     id_fornecedor INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(255) NOT NULL,
@@ -69,7 +69,7 @@ CREATE TABLE tb_fornecedores (
     email VARCHAR(255)
 );
 
--- Tabela de Pedidos
+-- Tabela de Pedidos 07/10
 CREATE TABLE tb_pedidos (
     id_pedido INT AUTO_INCREMENT PRIMARY KEY,
     id_mesa INT,
@@ -80,7 +80,7 @@ CREATE TABLE tb_pedidos (
     FOREIGN KEY (id_funcionario) REFERENCES tb_funcionarios(id_funcionario)
 );
 
--- Tabela de Detalhes dos Pedidos
+-- Tabela de Detalhes dos Pedidos 08/10
 CREATE TABLE tb_detalhes_pedidos (
     id_pedido INT,
     id_item INT,
@@ -91,7 +91,7 @@ CREATE TABLE tb_detalhes_pedidos (
     FOREIGN KEY (id_item) REFERENCES tb_menu(id_item)
 );
 
--- Tabela de Pagamentos
+-- Tabela de Pagamentos 09/10
 CREATE TABLE tb_pagamentos (
     id_pagamento INT AUTO_INCREMENT PRIMARY KEY,
     id_pedido INT,
@@ -102,7 +102,7 @@ CREATE TABLE tb_pagamentos (
     FOREIGN KEY (id_cliente) REFERENCES tb_clientes(id_cliente)
 );
 
--- Tabela de Formas de Pagamento
+-- Tabela de Formas de Pagamento 10/10
 CREATE TABLE tb_formas_pagamento (
     id_pagamento INT,
     forma_pagamento VARCHAR(50),
