@@ -48,6 +48,7 @@ Período de realização de 01/10/24 a 12/12/24
 | Aula 33* | 06.12.24 | STORE PROCEDURE - Aula 13 SQL | [Aula33](aula33/) |
 | Aula 34* | 09.12.24 | 4ª Avaliação (II prova SQL) | [Aula34](aula34/) |
 | Aula 35* | 10.12.24 | Projeto Final - Modelos conceitual e lógico | [Projeto Final](projeto_final/) |
+| Aula 36* | 11.12.24 | Projeto Final - Modelo físico, queries, funções e procedimentos | [Projeto Final](projeto_final/) |
 
 ## Miscelânea
 
