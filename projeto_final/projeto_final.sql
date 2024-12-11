@@ -13,7 +13,7 @@ USE db_restaurante;
 CREATE TABLE tb_clientes (
     id_cliente INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(255) NOT NULL,
-    tipo_cliente ENUM('PF', 'JJ') NOT NULL, -- 'F' para pessoa física e 'J' para pessoa jurídica
+    tipo_cliente ENUM('PF', 'PJ') NOT NULL, -- 'F' para pessoa física e 'J' para pessoa jurídica
     cpf VARCHAR(14),
     cnpj VARCHAR(18),
     telefone VARCHAR(15),
@@ -125,7 +125,7 @@ CREATE TABLE tb_pagamento_forma_pgto (
 );
 
 -- Tabela 13/13
-CREATE TALE tb_menu_detalhes (
+CREATE TABLE tb_menu_detalhes (
     id_item INT,
     id_detalhe_pedido INT,
     PRIMARY KEY (id_item, id_detalhe_pedido),
@@ -173,6 +173,9 @@ INSERT INTO tb_clientes (nome, tipo_cliente, cpf, cnpj, telefone, email) VALUES
 ('Banco VWX SA', 'PJ', NULL, '50.567.890/0001-50', '(61) 1616-1616', 'financas@bancovwx.com'),
 ('Seguradora YZ Ltda', 'PJ', NULL, '60.678.901/0001-60', '(61) 1717-1717', 'seguranca@seguradorayz.com');
 
+SELECT * FROM tb_clientes;
+
+
 -- Funcionários
 INSERT INTO tb_funcionarios (nome, data_nascimento, cpf, cargo, telefone, email, salario, data_contratacao) VALUES
 ('José da Silva', '1980-01-15', '123.456.789-00', 'Gerente', '(61) 1234-5678', 'jose.silva@example.com', 5000.00, '2023-01-01'),
@@ -201,6 +204,8 @@ INSERT INTO tb_funcionarios (nome, data_nascimento, cpf, cargo, telefone, email,
 ('Tatiana Fonseca', '1995-12-25', '456.789.012-55', 'Barman', '(61) 4234-7890', 'tatiana.fonseca@example.com', 2800.00, '2024-12-01'),
 ('Eduardo Moraes', '1987-01-30', '567.890.123-66', 'Auxiliar de Limpeza', '(61) 5234-7890', 'eduardo.moraes@example.com', 1800.00, '2024-01-01'),
 ('Lorena Gomes', '1990-02-05', '678.901.234-77', 'Garçonete', '(61) 6234-7890', 'lorena.gomes@example.com', 2500.00, '2024-02-01');
+
+SELECT * FROM tb_funcionarios;
 
 -- Endereço dos funcionários
 INSERT INTO tb_endereco_funcionario (id_funcionario, logradouro, numero, complemento, bairro, cidade, estado, cep) VALUES
@@ -231,6 +236,8 @@ INSERT INTO tb_endereco_funcionario (id_funcionario, logradouro, numero, complem
 (25, 'SQN 402', 123, 'Apto 202', 'Norte', 'Brasília', 'DF', '70740-030'),
 (26, 'Avenida das Palmeiras', 456, '', 'Centro', 'Planaltina', 'DF', '73300-000');
 
+SELECT * FROM tb_endereco_funcionario;
+
 -- Forma de pagamento
 INSERT INTO tb_formas_pagamento (forma_pagamento) VALUES
 ('Cartão de Crédito'),
@@ -239,6 +246,8 @@ INSERT INTO tb_formas_pagamento (forma_pagamento) VALUES
 ('Dinheiro'),
 ('Voucher'),
 ('Vale Refeição');
+
+SELECT * FROM tb_formas_pagamento;
 
 -- Pedidos
 INSERT INTO tb_pedidos (data_pedido, status) VALUES
@@ -552,6 +561,8 @@ INSERT INTO tb_pedidos (data_pedido, status) VALUES
 ('2024-12-11', 'Concluído'),
 ('2024-12-11', 'Concluído');
 
+SELECT * FROM tb_pedidos;
+
 -- Pagamentos
 INSERT INTO tb_pagamentos (valor, data_pagamento) VALUES
 (100.50, '2022-12-01'),
@@ -674,7 +685,7 @@ INSERT INTO tb_pagamentos (valor, data_pagamento) VALUES
 (155.00, '2023-03-07'),
 (165.00, '2023-03-08'),
 (175.00, '2023-03-09'),
-(190.00, '2023-03-10')
+(190.00, '2023-03-10'),
 (160.00, '2023-04-01'),
 (185.00, '2023-04-02'),
 (175.00, '2023-04-03'),
@@ -844,8 +855,6 @@ INSERT INTO tb_pagamentos (valor, data_pagamento) VALUES
 (175.00, '2024-10-25'),
 (160.25, '2024-10-30'),
 (170.50, '2024-10-31'),
--- Pagamentos de novembro de 2024
-INSERT INTO tb_pagamentos (valor, data_pagamento) VALUES
 (165.00, '2024-11-01'),
 (175.25, '2024-11-02'),
 (185.50, '2024-11-03'),
@@ -888,6 +897,7 @@ INSERT INTO tb_pagamentos (valor, data_pagamento) VALUES
 (170.75, '2024-12-10'),
 (180.00, '2024-12-11');
 
+SELECT * FROM tb_pagamentos;
 -- Mesas
 INSERT INTO tb_mesas (capacidade, localizacao) VALUES
 (4, 'Próximo à Janela'),
@@ -928,6 +938,8 @@ INSERT INTO tb_mesas (capacidade, localizacao) VALUES
 (2, 'Centro do Salão'),
 (4, 'Próximo à Cozinha'),
 (6, 'Área Externa');
+
+SELECT * FROM tb_mesas;
 
 -- Menu
 INSERT INTO tb_menu (nome, descricao, preco) VALUES
@@ -970,6 +982,8 @@ INSERT INTO tb_menu (nome, descricao, preco) VALUES
 ('Crepe de Queijo e Presunto', 'Crepe recheado com queijo e presunto.', 16.50),
 ('Tapioca de Coco', 'Tapioca recheada com coco ralado e leite condensado.', 12.50);
 
+SELECT * FROM tb_menu;
+
 -- Detalhe dos pedidos
 INSERT INTO tb_detalhes_pedido (id_pedido, id_item, quantidade, preco_unitario) VALUES
 (1, 1, 2, 25.00),
@@ -1010,6 +1024,8 @@ INSERT INTO tb_detalhes_pedido (id_pedido, id_item, quantidade, preco_unitario) 
 (18, 36, 1, 34.00),
 (19, 37, 1, 16.50),
 (19, 38, 1, 12.50);
+
+SELECT * FROM tb_detalhes_pedido;
 
 -- Cliente e a forma de pagamento
 INSERT INTO tb_cliente_forma_pgto (id_cliente, id_forma_pagamento) VALUES
@@ -1083,6 +1099,8 @@ INSERT INTO tb_cliente_forma_pgto (id_cliente, id_forma_pagamento) VALUES
 (34, 4),
 (35, 1),
 (35, 2);
+
+SELECT * FROM tb_cliente_forma_pgto;
 
 -- Funcionário e pedido
 INSERT INTO tb_funcionario_pedido (id_funcionario, id_pedido) VALUES
@@ -1216,6 +1234,8 @@ INSERT INTO tb_funcionario_pedido (id_funcionario, id_pedido) VALUES
 (24, 128),
 (25, 129),
 (26, 130);
+
+SELECT * FROM tb_funcionario_pedido;
 
 -- Pagamento e forma de pagamento
 INSERT INTO tb_pagamento_forma_pgto (id_pagamento, id_forma_pagamento) VALUES
@@ -1370,79 +1390,247 @@ INSERT INTO tb_pagamento_forma_pgto (id_pagamento, id_forma_pagamento) VALUES
 (149, 5),
 (150, 6);
 
+SELECT * FROM tb_pagamento_forma_pgto;
+
 -- Detalhes do menu
-INSERT INTO tb_menu_detalhes (id_item, detalhe, valor) VALUES
-(1, 'Tamanho', 'Grande'),
-(1, 'Ingredientes', 'Tomate, mussarela, manjericão'),
-(2, 'Tamanho', 'Médio'),
-(2, 'Acompanhamentos', 'Batata frita, salada'),
-(3, 'Tamanho', 'Pequeno'),
-(3, 'Acompanhamentos', 'Pão de alho'),
-(4, 'Tamanho', 'Grande'),
-(4, 'Acompanhamentos', 'Torradas'),
-(5, 'Porção', 'Individual'),
-(5, 'Acompanhamentos', 'Arroz, batata frita'),
-(6, 'Porção', 'Individual'),
-(6, 'Acompanhamentos', 'Legumes ao vapor'),
-(7, 'Tamanho', 'Grande'),
-(7, 'Molho', 'Bolonhesa'),
-(8, 'Porção', 'Individual'),
-(8, 'Ingredientes', 'Arroz arbóreo, cogumelos frescos'),
-(9, 'Porção', 'Individual'),
-(9, 'Acompanhamentos', 'Sorvete de baunilha'),
-(10, 'Porção', 'Individual'),
-(10, 'Acompanhamentos', 'Calda de chocolate'),
-(11, 'Tamanho', 'Pequeno'),
-(12, 'Porção', 'Individual'),
-(13, 'Tamanho', 'Grande'),
-(13, 'Acompanhamentos', 'Arroz, farofa'),
-(14, 'Porção', 'Grande'),
-(14, 'Molho', 'Bolonhesa'),
-(15, 'Tamanho', 'Pequeno'),
-(15, 'Ingredientes', 'Queijo, ervas frescas'),
-(16, 'Porção', 'Individual'),
-(16, 'Acompanhamentos', 'Calda de chocolate'),
-(17, 'Porção', 'Individual'),
-(17, 'Ingredientes', 'Camarões, ervas frescas'),
-(18, 'Tamanho', 'Médio'),
-(18, 'Ingredientes', 'Alho, ervas frescas'),
-(19, 'Porção', 'Pequena'),
-(19, 'Molho', 'Ketchup, maionese'),
-(20, 'Tamanho', 'Grande'),
-(20, 'Molho', 'Pimenta verde'),
-(21, 'Porção', 'Individual'),
-(21, 'Ingredientes', 'Frutas frescas da estação'),
-(22, 'Porção', 'Grande'),
-(22, 'Ingredientes', 'Peixe, arroz, algas'),
-(23, 'Porção', 'Individual'),
-(23, 'Acompanhamentos', 'Batata frita'),
-(24, 'Porção', 'Individual'),
-(24, 'Acompanhamentos', 'Sorvete de creme'),
-(25, 'Porção', 'Individual'),
-(25, 'Acompanhamentos', 'Calda de chocolate'),
-(26, 'Tamanho', 'Pequeno'),
-(26, 'Ingredientes', 'Morangos, chantilly'),
-(27, 'Porção', 'Pequena'),
-(27, 'Ingredientes', 'Trigo, água, lúpulo, levedura'),
-(28, 'Porção', 'Individual'),
-(28, 'Acompanhamentos', 'Cubos de gelo'),
-(29, 'Porção', 'Individual'),
-(29, 'Acompanhamentos', 'Molho barbecue, arroz'),
-(30, 'Porção', 'Pequena'),
-(30, 'Acompanhamentos', 'Queijo parmesão ralado'),
-(31, 'Porção', 'Individual'),
-(31, 'Ingredientes', 'Tomates, mussarela de búfala, manjericão'),
-(32, 'Porção', 'Individual'),
-(32, 'Acompanhamentos', 'Sorvete de baunilha'),
-(33, 'Porção', 'Individual'),
-(33, 'Ingredientes', 'Carne, pimentões, cebolas'),
-(34, 'Porção', 'Pequena'),
-(34, 'Acompanhamentos', 'Cobertura de chocolate'),
-(35, 'Tamanho', 'Médio'),
-(35, 'Ingredientes', 'Salsicha, molho, queijo, batata palha'),
-(36, 'Porção', 'Individual'),
-(36, 'Acompanhamentos', 'Pão de alho'),
-(37, 'Porção', 'Grande'),
-(37, 'Ingredientes', 'Queijos, embutidos'),
-(38, 'Tamanho', 'Pequeno'),
-(38, 'Ingredientes', 'Queijo, presunto');
+INSERT INTO tb_menu_detalhes (id_item, id_detalhe_pedido) VALUES
+(1, 1),
+(1, 2),
+(2, 3),
+(2, 4),
+(3, 5),
+(3, 6),
+(4, 7),
+(4, 8),
+(5, 9),
+(5, 10),
+(6, 11),
+(6, 12),
+(7, 13),
+(7, 14),
+(8, 15),
+(8, 16),
+(9, 17),
+(9, 18),
+(10, 19),
+(10, 20),
+(11, 21),
+(11, 22),
+(12, 23),
+(12, 24),
+(13, 25),
+(13, 26),
+(14, 27),
+(14, 28),
+(15, 29),
+(15, 30),
+(16, 31),
+(16, 32),
+(17, 33),
+(17, 34),
+(18, 35),
+(18, 36),
+(19, 37),
+(19, 38);
+
+SELECT * FROM tb_menu_detalhes;
+
+-- VIEW Clientes e suas formas de pagamento
+CREATE VIEW vw_clientes_formas_pagamento AS
+SELECT c.id_cliente, c.nome, f.forma_pagamento
+FROM tb_clientes c
+JOIN tb_cliente_forma_pgto cp ON c.id_cliente = cp.id_cliente
+JOIN tb_formas_pagamento f ON cp.id_forma_pagamento = f.id_forma_pagamento;
+
+SELECT * FROM vw_clientes_formas_pagamento; -- Esta view mostra todos os clientes e suas formas de pagamento associadas.
+
+-- View detalhes do pedido
+CREATE VIEW vw_detalhes_pedidos AS
+SELECT p.id_pedido, c.nome AS cliente, m.nome AS item_menu, dp.quantidade, dp.preco_unitario
+FROM tb_pedidos p
+JOIN tb_detalhes_pedido dp ON p.id_pedido = dp.id_pedido
+JOIN tb_clientes c ON p.id_cliente = c.id_cliente
+JOIN tb_menu m ON dp.id_item = m.id_item;
+
+DESC tb_pedidos; -- NO FK
+DESC tb_clientes; -- NO FK
+DESC tb_detalhes_pedido; -- FK (id_pedido, id_item)
+DESC tb_menu; -- NO FK
+
+SELECT * FROM vw_detalhes_pedidos; -- Esta view mostra os detalhes dos pedidos, incluindo os clientes e itens do menu.
+
+-- View pagamentos realizados
+CREATE VIEW vw_pagamentos_realizados AS
+SELECT pg.id_pagamento, pg.valor, pg.data_pagamento, fp.descricao AS forma_pagamento
+FROM tb_pagamentos pg
+JOIN tb_pagamento_forma_pgto pfp ON pg.id_pagamento = pfp.id_pagamento
+JOIN tb_formas_pagamento fp ON pfp.id_forma_pagamento = fp.id_forma_pagamento;
+
+SELECT * FROM vw_pagamentos_realizados; -- Esta view mostra todos os pagamentos realizados e suas formas de pagamento.
+
+-- View adicionar novo cliente
+CREATE VIEW vw_pagamentos_realizados AS
+SELECT pg.id_pagamento, pg.valor, pg.data_pagamento, fp.descricao AS forma_pagamento
+FROM tb_pagamentos pg
+JOIN tb_pagamento_forma_pgto pfp ON pg.id_pagamento = pfp.id_pagamento
+JOIN tb_formas_pagamento fp ON pfp.id_forma_pagamento = fp.id_forma_pagamento;
+
+SELECT * FROM vw_pagamentos_realizados; -- Este procedimento adiciona um novo cliente ao banco de dados.
+
+-- Procedimento atualizar endereço do funcionário
+DELIMITER $$
+CREATE PROCEDURE sp_atualizar_endereco_funcionario (
+    IN id_funcionario INT,
+    IN novo_endereco VARCHAR(255)
+)
+BEGIN
+    UPDATE tb_endereco_funcionario
+    SET endereco = novo_endereco
+    WHERE id_funcionario = id_funcionario;
+END $$
+DELIMITER ;
+
+-- Este procedimento atualiza o endereço de um funcionário específico.
+
+-- Procedimento registrar pagamento
+DELIMITER $$
+CREATE PROCEDURE sp_registrar_pagamento (
+    IN valor DECIMAL(10,2),
+    IN data_pagamento DATE,
+    IN id_forma_pagamento INT
+)
+BEGIN
+    INSERT INTO tb_pagamentos (valor, data_pagamento) VALUES (valor, data_pagamento);
+    SET @id_pagamento = LAST_INSERT_ID();
+    INSERT INTO tb_pagamento_forma_pgto (id_pagamento, id_forma_pagamento) VALUES (@id_pagamento, id_forma_pagamento);
+END $$
+DELIMITER ;
+
+-- Este procedimento registra um novo pagamento e associa uma forma de pagamento a ele.
+
+-- Função para calcular o total de pedidos de um cliente
+DELIMITER $$
+CREATE FUNCTION fn_total_pedidos_cliente (id_cliente INT)
+RETURNS DECIMAL(10,2)
+DETERMINISTIC
+BEGIN
+    DECLARE total DECIMAL(10,2);
+    SELECT SUM(dp.preco_unitario * dp.quantidade)
+    INTO total
+    FROM tb_pedidos p
+    JOIN tb_detalhes_pedido dp ON p.id_pedido = dp.id_pedido
+    WHERE p.id_cliente = id_cliente;
+    RETURN total;
+END $$
+DELIMITER ;
+
+-- Esta função calcula o total de pedidos de um cliente específico.
+
+-- Função para calcular a média de pagamentos
+DELIMITER $$
+CREATE FUNCTION fn_media_pagamentos ()
+RETURNS DECIMAL(10,2)
+DETERMINISTIC
+BEGIN
+    DECLARE media DECIMAL(10,2);
+    SELECT AVG(valor)
+    INTO media
+    FROM tb_pagamentos;
+    RETURN media;
+END $$
+DELIMITER ;
+
+-- Esta função calcula a média dos valores dos pagamentos realizados.
+
+-- View pedidos e funcionários responsáveis
+CREATE VIEW vw_pedidos_funcionarios AS
+SELECT p.id_pedido, f.nome AS funcionario
+FROM tb_pedidos p
+JOIN tb_funcionario_pedido fp ON p.id_pedido = fp.id_pedido
+JOIN tb_funcionarios f ON fp.id_funcionario = f.id_funcionario;
+
+SELECT * FROM vw_pedidos_funcionarios; -- Esta view mostra todos os pedidos e os funcionários responsáveis por eles.
+
+-- View cardápio completo
+CREATE VIEW vw_cardapio_completo AS
+SELECT m.nome, m.descricao, m.preco, md.detalhe, md.valor
+FROM tb_menu m
+LEFT JOIN tb_menu_detalhes md ON m.id_item = md.id_item;
+
+SELECT * FROM vw_cardapio_completo; -- Esta view mostra o cardápio completo com detalhes dos itens.
+
+-- Procedimento adicionar novo pedido
+DELIMITER $$
+CREATE PROCEDURE sp_adicionar_pedido (
+    IN id_cliente INT,
+    IN data_pedido DATE
+)
+BEGIN
+    INSERT INTO tb_pedidos (id_cliente, data_pedido, status) VALUES (id_cliente, data_pedido, 'Pendente');
+END $$
+DELIMITER ;
+
+-- Este procedimento adiciona um novo pedido para um cliente específico.
+
+-- Procedimento atualizar status do pedido
+DELIMITER $$
+CREATE PROCEDURE sp_atualizar_status_pedido (
+    IN id_pedido INT,
+    IN novo_status VARCHAR(255)
+)
+BEGIN
+    UPDATE tb_pedidos
+    SET status = novo_status
+    WHERE id_pedido = id_pedido;
+END $$
+DELIMITER ;
+
+-- Este procedimento atualiza o status de um pedido específico.
+
+-- Função para calcular o total de itens vendidos
+DELIMITER $$
+CREATE FUNCTION fn_total_itens_vendidos ()
+RETURNS INT
+DETERMINISTIC
+BEGIN
+    DECLARE total INT;
+    SELECT SUM(quantidade)
+    INTO total
+    FROM tb_detalhes_pedido;
+    RETURN total;
+END $$
+DELIMITER ;
+
+-- Esta função calcula o total de itens vendidos.
+
+-- View clientes e seus pedidos
+CREATE VIEW vw_clientes_pedidos AS
+SELECT c.nome AS cliente, p.id_pedido, p.data_pedido, p.status
+FROM tb_clientes c
+JOIN tb_pedidos p ON c.id_cliente = p.id_cliente;
+
+SELECT * FROM vw_clientes_pedidos; -- Esta view mostra todos os clientes e seus pedidos.
+
+-- View pagamentos por data
+CREATE VIEW vw_pagamentos_por_data AS
+SELECT data_pagamento, COUNT(*) AS total_pagamentos, SUM(valor) AS total_valor
+FROM tb_pagamentos
+GROUP BY data_pagamento;
+
+SELECT * FROM vw_pagamentos_por_data; -- Esta view mostra o total de pagamentos e o valor total por data.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
