@@ -1361,6 +1361,8 @@ JOIN tb_clientes c ON p.id_cliente = c.id_cliente
 JOIN tb_funcionarios f ON p.id_funcionario = f.id_funcionario
 JOIN tb_mesas m ON p.id_mesa = m.id_mesa;
 
+SELECT * FROM vw_detalhes_pedidos;
+
 -- View para listar todos os funcionários com seus endereços:
 CREATE VIEW vw_funcionarios_enderecos AS
 SELECT f.id_funcionario, f.nome, f.cargo, e.logradouro, e.numero, e.complemento, e.bairro, e.cidade, e.estado, e.cep
