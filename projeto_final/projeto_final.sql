@@ -1372,9 +1372,11 @@ SELECT * FROM vw_funcionarios_enderecos;
 -- View para listar todas as formas de pagamento utilizadas em pedidos:
 CREATE VIEW vw_formas_pagamento_pedidos AS
 SELECT p.id_pedido, c.nome AS nome_cliente, f.descricao AS forma_pagamento
-FROM tb_pedidos p
-JOIN tb_cliente_forma_pgto cpf ON p.id_cliente = cpf.id_cliente
+FROM tb_pedidos AS p
+JOIN tb_cliente_forma_pgto AS cpf ON p.id_cliente = cpf.id_cliente
 JOIN tb_formas_pagamento f ON cpf.id_forma_pagamento = f.id_forma_pagamento;
+
+SELECT * FROM vw_formas_pagamento_pedidos;
 
 -- Procedimento para inserir um novo cliente:
 DELIMITER $$
@@ -1408,6 +1410,9 @@ BEGIN
 END $$
 DELIMITER ;
 
+CALL sp_inserir_pedido(1, 102, '2024-12-12', 'Em Andamento', 3);
+SELECT * FROM tb_pedidos;
+
 -- Procedimento para atualizar o status de um pedido:
 DELIMITER $$
 CREATE PROCEDURE sp_atualizar_status_pedido(
@@ -1420,6 +1425,9 @@ BEGIN
     WHERE id_pedido = id_pedido_atualizar;
 END $$
 DELIMITER ;
+
+CALL sp_atualizar_status_pedido(10, 'Concluído');
+SELECT * FROM tb_pedidos;
 
 -- Procedimento para excluir um cliente:
 DELIMITER $$
@@ -1448,6 +1456,9 @@ BEGIN
 END $$
 DELIMITER ;
 
+CALL sp_listar_pedidos_cliente(1);
+SELECT * FROM tb_pedidos;
+
 -- Função para calcular a média de pedidos por cliente:
 DELIMITER $$
 CREATE FUNCTION fn_media_pedidos_cliente()
@@ -1461,6 +1472,8 @@ BEGIN
     RETURN media_pedidos;
 END $$
 DELIMITER ;
+
+SELECT fn_media_pedidos_cliente() AS media_pedidos_cliente;
 
 -- Função para calcular o total de vendas de um período:
 DELIMITER $$
