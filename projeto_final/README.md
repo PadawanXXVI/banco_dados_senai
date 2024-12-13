@@ -4,6 +4,11 @@
 
 Projeto final apresentado ao Curso de Administrador de Banco de Dados do Senai SIG-DF sob orientação do Professor Ygor Rio Pardo Felix para obtenção de nota da 4ª avaliação.
 
+São integrantes do projeto:
+- Anderson
+- Francisco
+- Inácio
+
 O projeto refere-se à criação de um Banco de Dados de um restaurante.  
 O projeto é composto por:
 - Modelo conceitual
@@ -19,6 +24,5 @@ São entidades do Banco de Dados:
 - Pedido
 - Mesa
 - Pagamento
-- Fornecedor
 
 [Página Inicial](../README.md)
